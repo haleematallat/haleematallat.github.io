@@ -2,18 +2,6 @@
   var root = document.documentElement;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---- Lahore clock ---- */
-  var clock = document.querySelector('[data-clock]');
-  function tick() {
-    if (!clock) return;
-    try {
-      clock.textContent = new Intl.DateTimeFormat('en-GB', {
-        hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Karachi'
-      }).format(new Date());
-    } catch (e) { clock.parentNode.style.display = 'none'; }
-  }
-  tick(); setInterval(tick, 20000);
-
   /* ---- theme ---- */
   var themeBtn = document.querySelector('.theme');
   var themeLabel = document.querySelector('[data-theme-label]');
@@ -39,7 +27,11 @@
       corrected: 'Validation accuracy under the corrected 11-way protocol'
     };
     var values = { reported: 46.7, corrected: 89.7 };
+    var announce = inst.querySelector('[data-announce]');
     var shown = 46.7, raf;
+    function settle(p) {
+      if (announce) announce.textContent = values[p].toFixed(1) + '% validation accuracy, ' + captions[p].toLowerCase().replace('validation accuracy ', '');
+    }
     inst.querySelectorAll('[data-set]').forEach(function (b) {
       b.addEventListener('click', function () {
         var p = b.dataset.set;
@@ -48,7 +40,7 @@
         inst.querySelectorAll('[data-set]').forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
         cap.textContent = captions[p];
         var from = shown, to = values[p];
-        if (reduce) { shown = to; acc.textContent = to.toFixed(1); return; }
+        if (reduce) { shown = to; acc.textContent = to.toFixed(1); settle(p); return; }
         var t0 = performance.now();
         cancelAnimationFrame(raf);
         (function step(now) {
@@ -56,7 +48,7 @@
           var e = 1 - Math.pow(1 - k, 3);
           shown = from + (to - from) * e;
           acc.textContent = shown.toFixed(1);
-          if (k < 1) raf = requestAnimationFrame(step);
+          if (k < 1) raf = requestAnimationFrame(step); else settle(p);
         })(t0);
       });
     });

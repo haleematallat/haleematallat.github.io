@@ -55,7 +55,7 @@
     </div>
     <div class="body">
       <h1>Haleema Tallat</h1>
-      <p class="claim">Machine learning engineer. Models, evaluation and production inference.</p>
+      <p class="claim">I build machine learning systems, and I check whether they actually work.</p>
       <p class="lede">I studied electrical engineering, and it shaped how I work in machine learning. Signals and systems, DSP, probability and optimisation gave me the maths, and working close to hardware taught me to think about latency, memory and failure modes alongside accuracy.</p>
       <p class="lede">Since then I’ve worked across training, evaluation and production inference, on computer vision, LLM systems and agents. The question I keep coming back to is whether a model’s measured behaviour actually holds up, which is what draws me to evaluation and to research in technical AI alignment and safety.</p>
       <ul class="links">
@@ -73,7 +73,7 @@
       <div class="margin"><p class="label">Research interests</p></div>
       <div class="body">
         <h2 id="research-h" class="section-title">Technical AI alignment and safety</h2>
-        <p class="prose">I’m interested in technical AI alignment and safety, and I want to do research and make contributions in this area. A lot of my work in evaluation has been about checking whether a model’s reported behaviour holds up, and that is a big part of safety research too. I’m currently enrolled in BlueDot Impact’s Technical AI Safety course. I was also selected to collaborate on ConspiracyBench, the first research project from Stationhouse, a new San Francisco group building infrastructure for open AI research collaboration. We’re building a benchmark to evaluate whether models believe conspiracy theories, and will then fine-tune a Qwen 3.5 4B model to hill-climb on it.</p>
+        <p class="prose">I want to do research in technical AI alignment and safety. A lot of my work in evaluation has been about checking whether a model’s reported behaviour holds up, and that is a big part of safety research too. I’m currently enrolled in BlueDot Impact’s Technical AI Safety course. I was also selected to collaborate on ConspiracyBench, the first research project from Stationhouse, a new San Francisco group building infrastructure for open AI research collaboration. We’re building a benchmark to evaluate whether models believe conspiracy theories, and will then fine-tune a Qwen 3.5 4B model to hill-climb on it.</p>
         <dl class="toolkit research-list">
           <div><dt>Course</dt><dd><a href="https://bluedot.org/courses/technical-ai-safety">Technical AI Safety, BlueDot Impact</a> <span class="dim">· enrolled, 2026</span></dd></div>
           <div><dt>Collaboration</dt><dd><a href="https://www.station-house.net/projects">ConspiracyBench, Stationhouse</a> <span class="dim">· benchmark and fine-tuning, 2026</span></dd></div>
@@ -88,7 +88,7 @@
   <section class="section" id="work" aria-labelledby="work-h">
     <div class="row section-head" data-mark>
       <div class="margin"><p class="label">Selected work</p></div>
-      <div class="body"><h2 id="work-h" class="section-title">Some of the things I’ve built and shipped.</h2></div>
+      <div class="body"><h2 id="work-h" class="section-title">What I’ve built and shipped.</h2></div>
     </div>
 
     <!-- evaluation -->
@@ -99,7 +99,7 @@
       </div>
       <div class="body">
         <h3>Fixing the evaluation of a few-shot barcode classifier</h3>
-        <p>I trained a ResNet-12 prototypical-network classifier on damaged and glared barcode images, then found the reported numbers were an artifact of the harness. There was split leakage, a 1-shot vs 3–40-shot support mismatch, and a 3-way vs 11-way evaluation mismatch. I rebuilt the held-out split and the episode sampler. Under the corrected 11-way protocol the model reached 89.7% validation accuracy, against the 46.7% that had been reported.</p>
+        <p>I trained a ResNet-12 prototypical-network classifier on damaged and glared barcode images, then found the reported numbers were an artefact of the harness. There was split leakage, a 1-shot vs 3–40-shot support mismatch, and a 3-way vs 11-way evaluation mismatch. I rebuilt the held-out split and the episode sampler. Under the corrected 11-way protocol the model reached 89.7% validation accuracy, against the 46.7% that had been reported.</p>
 
         <figure class="instrument" data-protocol="reported">
           <div class="instrument-head">
@@ -110,8 +110,9 @@
             </div>
           </div>
           <div class="gauge">
-            <p class="gauge-value" aria-live="polite"><span data-acc>46.7</span><small>%</small></p>
+            <p class="gauge-value"><span data-acc>46.7</span><small>%</small></p>
             <p class="gauge-caption" data-caption>Validation accuracy under the original harness</p>
+            <p class="visually-hidden" data-announce aria-live="polite"></p>
             <div class="scale" aria-hidden="true">
               <div class="scale-fill"></div>
               <span style="left:0">0</span><span style="left:50%">50</span><span style="left:100%">100</span>
@@ -421,7 +422,7 @@
     <div class="row" data-mark>
       <div class="margin"><p class="label">Contact</p></div>
       <div class="body">
-        <h2 id="contact-h" class="claim">Get in touch</h2>
+        <h2 id="contact-h" class="claim">Say hello</h2>
         <p class="lede">Email and LinkedIn are the best ways to reach me.</p>
         <div class="email-row">
           <a class="btn btn--big" href="mailto:haleematallat019@gmail.com">haleematallat019@gmail.com</a>

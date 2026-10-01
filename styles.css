@@ -52,7 +52,7 @@ h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
 ul, ol { padding: 0; list-style: none; }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { color: var(--signal-ink); }
-:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 2px; }
+:focus-visible { outline: 2px solid var(--signal-ink); outline-offset: 3px; border-radius: 2px; }
 ::selection { background: var(--signal); color: var(--paper); }
 .dim { color: var(--graphite); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -67,8 +67,7 @@ a:hover { color: var(--signal-ink); }
   font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 500;
   color: var(--signal-ink);
 }
-.meta, .date, .readout { font-size: 13px; line-height: 1.5; color: var(--graphite); margin-top: 8px; }
-.readout { color: var(--ink); margin-top: 6px; }
+.meta, .date { font-size: 13px; line-height: 1.5; color: var(--graphite); margin-top: 8px; }
 .meta span { display: block; }
 .date span { display: block; }
 
@@ -243,7 +242,6 @@ h1 {
   position: absolute; left: 10px; bottom: 10px; font-family: var(--mono); font-size: 11.5px;
   background: var(--ink); color: var(--paper); padding: 3px 8px; border-radius: 3px;
 }
-.thumb--empty .play { background: none; color: var(--graphite); }
 .talk h3 { font-family: var(--serif); font-weight: 500; font-size: 23px; line-height: 1.25; letter-spacing: -.01em; }
 .talk p { color: var(--graphite); font-size: 16px; margin-top: 8px; max-width: 60ch; }
 .watch { display: inline-block; margin-top: 12px; font-size: 15px; color: var(--signal-ink); }
@@ -263,11 +261,9 @@ h1 {
 .plain li { font-size: 16px; padding: 12px 0; border-top: 1px solid var(--rule); }
 .plain li:last-child { border-bottom: 1px solid var(--rule); }
 .plain strong { font-weight: 600; }
-.repos a { font-family: var(--mono); font-size: 14px; display: block; margin-bottom: 2px; }
 .toolkit { margin-top: 0; }
 .small-h--gap { margin-top: 44px; }
 .columns { margin-top: 36px; }
-.repos a.inline { font-family: var(--sans); font-size: inherit; display: inline; margin: 0; }
 .toolkit > div { display: grid; grid-template-columns: 200px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid var(--rule); font-size: 16px; }
 .toolkit > div:last-child { border-bottom: 1px solid var(--rule); }
 .toolkit dt { font-size: 12.5px; color: var(--graphite); padding-top: 3px; }
@@ -293,18 +289,21 @@ h1 {
   .readouts { border-left: 0; padding-left: 0; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); border-top: 1px solid var(--rule); padding-top: 18px; }
 }
 @media (max-width: 760px) {
+  html { scroll-padding-top: 86px; }
   .page { padding: 0 16px 24px; }
-  .top { padding: 12px 16px; gap: 14px; }
-  .top nav { gap: 14px; font-size: 12px; }
-  .top nav a[href="#log"], .top nav a[href="#work"] { display: none; }
-  .brand { font-size: 17px; }
+  .top { padding: 10px 16px 8px; gap: 10px; flex-wrap: wrap; }
+  .top nav {
+    order: 3; width: 100%; margin-left: 0; gap: 0;
+    justify-content: space-between; font-size: 12px;
+  }
+  .brand { font-size: 17px; margin-right: auto; }
   .trace { display: none; }
   .row { display: block; padding-left: 0; }
   .margin { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-bottom: 14px; }
   .meta span { display: inline; }
   .meta span + span::before { content: "· "; }
   .date span { display: inline; }
-  .margin .meta, .margin .readout, .margin .date { margin-top: 0; }
+  .margin .meta, .margin .date { margin-top: 0; }
   .hero .margin { padding-top: 0; margin-bottom: 28px; }
   .case + .case .margin, .log > li .margin { padding-top: 0; }
   .case + .case .body { border-top: 0; padding-top: 0; }
@@ -315,7 +314,6 @@ h1 {
   .talks > li .margin { padding-top: 0; }
   .talks > li .body { border-top: 0; padding-top: 0; }
   .talk { grid-template-columns: 1fr; gap: 16px; }
-  .thumb--empty { display: none; }
   .section { padding-top: 56px; }
   .columns { grid-template-columns: 1fr; gap: 28px; }
   .checks > div, .toolkit > div { grid-template-columns: 1fr; gap: 2px; }
@@ -324,7 +322,7 @@ h1 {
   .btn--big { font-size: 15px; word-break: break-all; }
 }
 @media (max-width: 380px) {
-  .top nav a[href="#research"] { display: none; }
+  .top nav { font-size: 11px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
