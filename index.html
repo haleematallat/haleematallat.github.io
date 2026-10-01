@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haleema Tallat — Machine Learning Engineer</title>
+<meta name="description" content="Haleema Tallat, machine learning engineer in Lahore. LLM inference, agents, evaluation, computer vision and real-time systems.">
+<meta name="author" content="Haleema Tallat">
+<link rel="canonical" href="https://haleematallat.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Haleema Tallat — Machine Learning Engineer">
+<meta property="og:description" content="LLM inference, agents, evaluation, computer vision and real-time systems.">
+<meta property="og:url" content="https://haleematallat.github.io/">
+<meta property="og:image" content="https://haleematallat.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>
+  try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Haleema Tallat","jobTitle":"Machine Learning Engineer","address":{"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},"email":"mailto:haleematallat019@gmail.com","url":"https://haleematallat.github.io/","sameAs":["https://github.com/haleematallat","https://www.linkedin.com/in/haleema-tallat","https://x.com/HaleemaTallat"],"alumniOf":"University of Engineering and Technology, Lahore"}
+</script>
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+
+<header class="top">
+  <a class="brand" href="#top">Haleema Tallat</a>
+  <nav aria-label="Sections">
+    <a href="#research">Research</a>
+    <a href="#work">Work</a>
+    <a href="#talks">Talks</a>
+    <a href="#log">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="theme" type="button" aria-label="Switch colour theme"><span data-theme-label>Dark</span></button>
+</header>
+
+<main class="page" id="top">
+  <svg class="trace" aria-hidden="true" focusable="false">
+    <defs><clipPath id="trace-clip"><rect class="trace-clip" x="0" y="0" width="60" height="0"/></clipPath></defs>
+    <path class="trace-base" d=""/>
+    <path class="trace-live" d="" clip-path="url(#trace-clip)"/>
+    <circle class="trace-dot" r="4" cx="0" cy="0"/>
+  </svg>
+
+  <!-- HERO -->
+  <section class="row hero" data-mark>
+    <div class="margin">
+      <p class="label">Profile</p>
+    </div>
+    <div class="body">
+      <h1>Haleema Tallat</h1>
+      <p class="claim">Machine learning engineer. Models, evaluation and production inference.</p>
+      <p class="lede">I studied electrical engineering, and it shaped how I work in machine learning. Signals and systems, DSP, probability and optimisation gave me the maths, and working close to hardware taught me to think about latency, memory and failure modes alongside accuracy.</p>
+      <p class="lede">Since then I’ve worked across training, evaluation and production inference, on computer vision, LLM systems and agents. The question I keep coming back to is whether a model’s measured behaviour actually holds up, which is what draws me to evaluation and to research in technical AI alignment and safety.</p>
+      <ul class="links">
+        <li><a class="btn" href="mailto:haleematallat019@gmail.com">Email me</a></li>
+        <li><a href="haleema-tallat-resume.pdf">Résumé <span class="dim">PDF</span></a></li>
+        <li><a href="https://github.com/haleematallat" rel="me">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/haleema-tallat" rel="me">LinkedIn</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="section" id="research" aria-labelledby="research-h">
+    <div class="row" data-mark>
+      <div class="margin"><p class="label">Research interests</p></div>
+      <div class="body">
+        <h2 id="research-h" class="section-title">Technical AI alignment and safety</h2>
+        <p class="prose">I’m interested in technical AI alignment and safety, and I want to do research and make contributions in this area. A lot of my work in evaluation has been about checking whether a model’s reported behaviour holds up, and that is a big part of safety research too. I’m currently enrolled in BlueDot Impact’s Technical AI Safety course. I was also selected to collaborate on ConspiracyBench, the first research project from Stationhouse, a new San Francisco group building infrastructure for open AI research collaboration. We’re building a benchmark to evaluate whether models believe conspiracy theories, and will then fine-tune a Qwen 3.5 4B model to hill-climb on it.</p>
+        <dl class="toolkit research-list">
+          <div><dt>Course</dt><dd><a href="https://bluedot.org/courses/technical-ai-safety">Technical AI Safety, BlueDot Impact</a> <span class="dim">· enrolled, 2026</span></dd></div>
+          <div><dt>Collaboration</dt><dd><a href="https://www.station-house.net/projects">ConspiracyBench, Stationhouse</a> <span class="dim">· benchmark and fine-tuning, 2026</span></dd></div>
+          <div><dt>Talk</dt><dd><a href="https://www.youtube.com/watch?v=ccGgJAtZ81Y">Sleeper Agents: Deceptive LLMs &amp; Safety Training</a> <span class="dim">· DevFest Lahore 2024</span></dd></div>
+          <div><dt>Also interested in</dt><dd>Evaluation methodology, generative models</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section" id="work" aria-labelledby="work-h">
+    <div class="row section-head" data-mark>
+      <div class="margin"><p class="label">Selected work</p></div>
+      <div class="body"><h2 id="work-h" class="section-title">Some of the things I’ve built and shipped.</h2></div>
+    </div>
+
+    <!-- evaluation -->
+    <article class="row case case--feature" data-mark>
+      <div class="margin">
+        <p class="label">Evaluation</p>
+        <p class="meta"><span>Brick &amp; Mortar AI</span> <span>2025</span></p>
+      </div>
+      <div class="body">
+        <h3>Fixing the evaluation of a few-shot barcode classifier</h3>
+        <p>I trained a ResNet-12 prototypical-network classifier on damaged and glared barcode images, then found the reported numbers were an artifact of the harness. There was split leakage, a 1-shot vs 3–40-shot support mismatch, and a 3-way vs 11-way evaluation mismatch. I rebuilt the held-out split and the episode sampler. Under the corrected 11-way protocol the model reached 89.7% validation accuracy, against the 46.7% that had been reported.</p>
+
+        <figure class="instrument" data-protocol="reported">
+          <div class="instrument-head">
+            <span class="label">Evaluation protocol</span>
+            <div class="switch" role="group" aria-label="Evaluation protocol">
+              <button type="button" data-set="reported" aria-pressed="true">Original</button>
+              <button type="button" data-set="corrected" aria-pressed="false">Corrected</button>
+            </div>
+          </div>
+          <div class="gauge">
+            <p class="gauge-value" aria-live="polite"><span data-acc>46.7</span><small>%</small></p>
+            <p class="gauge-caption" data-caption>Validation accuracy under the original harness</p>
+            <div class="scale" aria-hidden="true">
+              <div class="scale-fill"></div>
+              <span style="left:0">0</span><span style="left:50%">50</span><span style="left:100%">100</span>
+            </div>
+          </div>
+          <dl class="checks">
+            <div><dt>Train / validation split</dt><dd><span class="r">Leakage between splits</span><span class="c">Held-out split rebuilt</span></dd></div>
+            <div><dt>Support set</dt><dd><span class="r">1-shot vs 3–40-shot</span><span class="c">Consistent support size</span></dd></div>
+            <div><dt>Episodes</dt><dd><span class="r">3-way</span><span class="c">11-way</span></dd></div>
+          </dl>
+          <figcaption class="dim">Same model and data, evaluated two ways.</figcaption>
+        </figure>
+        <p class="stack">PyTorch · ResNet-12 · prototypical networks · episodic evaluation</p>
+      </div>
+    </article>
+
+    <!-- open source -->
+    <article class="row case" data-mark>
+      <div class="margin">
+        <p class="label">Open source</p>
+        <p class="meta"><span>Personal project</span> <span>2026</span></p>
+      </div>
+      <div class="body">
+        <h3><a class="h-link" href="https://github.com/haleematallat/inference-pipeline">Vision Inference Pipeline</a></h3>
+        <div class="split">
+          <div>
+            <p>A standalone computer-vision inference framework built around the same runner, backend and stream boundaries used in larger streaming systems. It runs prototypical few-shot classification with PyTorch locally or over Triton gRPC, with tests checking numerical parity between the two backends. Support prototypes are cached when the backend starts, and a benchmark checks the measured speedup against the expected cost model.</p>
+            <p>I also evaluated it on Omniglot with 100 fixed 5-way 5-shot episodes and frozen ImageNet encoders, and compared cosine and Euclidean scoring as paired differences on the same episodes with 95% confidence intervals. The method itself is the original prototypical-network approach. My work is the inference system around it: configuration, replaceable backends, stream boundaries, Docker and CI.</p>
+          </div>
+          <dl class="readouts">
+            <div><dt>91.7%</dt><dd>5-way 5-shot Omniglot, frozen ResNet18</dd></div>
+            <div><dt>1.4–3.8×</dt><dd>speedup from prototype caching, 1–20 shots</dd></div>
+          </dl>
+        </div>
+        <p class="stack">PyTorch · Triton Inference Server · Docker · Redis · GitHub Actions · <a href="https://github.com/haleematallat/inference-pipeline">View on GitHub</a></p>
+      </div>
+    </article>
+
+    <!-- llm -->
+    <article class="row case" data-mark>
+      <div class="margin">
+        <p class="label">LLM inference</p>
+        <p class="meta"><span>IgniteTech</span> <span>2025–26</span></p>
+      </div>
+      <div class="body">
+        <h3>Self-hosted LLM serving for a customer-care platform</h3>
+        <div class="split">
+          <div>
+            <p>I built and owned the self-hosted LLM serving layer behind AI-drafted responses for human support agents, on a unified customer-care and social-media platform. That covered everything from model hosting through to the product request path. Automated conversations and human escalation are routed into the same care workspace, so bots and agents work over one channel.</p>
+            <p>I also designed and built the platform’s first production-grade social engine in about three months. I then generalised it into an implementation playbook and operator runbooks, and 20 more engines have shipped from that template.</p>
+          </div>
+          <dl class="readouts">
+            <div><dt>1,000+</dt><dd>customer interactions a day</dd></div>
+            <div><dt>10–15</dt><dd>messaging channels</dd></div>
+            <div><dt>20</dt><dd>engines shipped from the template</dd></div>
+          </dl>
+        </div>
+        <p class="stack">vLLM · Python · TypeScript · Kafka</p>
+      </div>
+    </article>
+
+    <!-- agents -->
+    <article class="row case" data-mark>
+      <div class="margin">
+        <p class="label">Agents</p>
+        <p class="meta"><span>IgniteTech</span> <span>2025–26</span></p>
+      </div>
+      <div class="body">
+        <h3>An agent that checks business rules instead of guessing them</h3>
+        <p>I built an AI agent with Claude and MCP, and the most interesting part wasn’t the model - it was how we structured domain knowledge. We converted business rules from documentation into a machine-readable schema: required fields, validation logic, routing criteria and acceptable values, all explicitly defined in a format the agent can query and check against. This isn’t RAG or vector search - it’s structured data the agent can reason over. It was built and deployed in a few days and handles real service requests.</p>
+        <blockquote class="pull">
+          <p>If the rules exist only in documentation, the agent is guessing. If they’re structured data, the agent knows.</p>
+          <footer><a href="https://www.linkedin.com/in/haleema-tallat/recent-activity/all/">From my LinkedIn post</a></footer>
+        </blockquote>
+        <p>I also built internal MCP integrations exposing GitHub, Jira, Confluence and CI/CD as controlled tools to Claude Code, Cursor and an internal autonomous software-development platform. I added Langfuse instrumentation so teams could trace, replay and debug multi-turn LLM and tool-call interactions.</p>
+        <p class="stack">Claude · MCP · Langfuse · Claude Code · Cursor</p>
+      </div>
+    </article>
+
+    <!-- realtime -->
+    <article class="row case" data-mark>
+      <div class="margin">
+        <p class="label">Real-time</p>
+        <p class="meta"><span>NextBridge</span> <span>2024–25</span></p>
+      </div>
+      <div class="body">
+        <h3>WebRTC control for a smart wheelchair</h3>
+        <p>I built the end-to-end WebRTC control stack: a signalling server (SDP offer/answer, ICE negotiation), a joystick-driven sender, and a Jetson-based ROS&nbsp;2 receiver deployed on the chair. Since someone is sitting in it, connection resilience mattered most. There is heartbeat and timeout detection, exponential-backoff reconnection, and a safety watchdog that force-stops the chair on link loss. I also instrumented round-trip latency across the live link for continuous tuning, and streamed the on-device camera feed into the control loop as groundwork for vision-based navigation.</p>
+        <figure class="flow" aria-label="Control path from joystick to motors">
+          <ol>
+            <li><span class="node">Joystick sender</span></li>
+            <li class="edge"><span>SDP · ICE</span></li>
+            <li><span class="node">Signalling server</span></li>
+            <li class="edge"><span>WebRTC</span></li>
+            <li><span class="node">Jetson · ROS 2</span></li>
+            <li class="edge"><span>drive</span></li>
+            <li><span class="node">Motors</span></li>
+          </ol>
+          <figcaption><span class="tag">Watchdog</span> link lost: force-stop the chair, then reconnect with backoff.</figcaption>
+        </figure>
+        <p class="stack">WebRTC · ROS 2 · NVIDIA Jetson · Python</p>
+      </div>
+    </article>
+
+    <!-- inference -->
+    <article class="row case" data-mark>
+      <div class="margin">
+        <p class="label">Computer vision</p>
+        <p class="meta"><span>Brick &amp; Mortar AI</span> <span>2025</span></p>
+      </div>
+      <div class="body">
+        <h3>Multi-camera tracking and re-identification</h3>
+        <div class="split">
+          <p>The pipeline runs YOLOv8/v11 segmentation, computes 512-d ReID embeddings from segmented person pixels only, then associates people across cameras. This cut identity switches by 20% compared with the full-bounding-box baseline. I took it to production: PyTorch to ONNX to TensorRT, the Triton configuration, a custom Triton ReID backend with a re-tuned matching threshold, and fixes for the shape-mismatch and runner-registration failures in the deployed stack. GPU-accelerated RTSP decoding raised throughput 10–15× over naive full-resolution decoding.</p>
+          <dl class="readouts">
+            <div><dt>−20%</dt><dd>identity switches</dd></div>
+            <div><dt>10–15×</dt><dd>pipeline throughput</dd></div>
+          </dl>
+        </div>
+        <p class="stack">YOLOv8/v11 · ONNX · TensorRT · Triton Inference Server</p>
+      </div>
+    </article>
+
+    <!-- infra -->
+    <article class="row case" data-mark>
+      <div class="margin">
+        <p class="label">Infrastructure</p>
+        <p class="meta"><span>IgniteTech</span> <span>2025–26</span></p>
+      </div>
+      <div class="body">
+        <h3>Event processing on Kafka and Kubernetes</h3>
+        <div class="split">
+          <p>Kafka pipelines for up to 27 channel engines, with KEDA lag-based autoscaling, Prometheus monitoring and graceful draining. I decomposed Java monoliths into stateless Node/TypeScript services on Kubernetes.</p>
+          <dl class="readouts">
+            <div><dt>6–10×</dt><dd>less memory</dd></div>
+            <div><dt>~20×</dt><dd>faster startup</dd></div>
+          </dl>
+        </div>
+        <p class="stack">Kafka · KEDA · Kubernetes · Prometheus · TypeScript</p>
+      </div>
+    </article>
+
+    <!-- anomaly -->
+    <article class="row case" data-mark>
+      <div class="margin">
+        <p class="label">Anomaly detection</p>
+        <p class="meta"><span>Powersoft19</span> <span>2023–24</span></p>
+      </div>
+      <div class="body">
+        <h3>Fault detection on device telemetry</h3>
+        <div class="split">
+          <p>I owned fault and anomaly detection on device telemetry from data to production. It replaced manual visual inspection, and I optimised the CUDA/PyTorch side with mixed-precision training, pinned-memory host-to-device transfers and channels-last layout for tensor-core utilisation.</p>
+          <dl class="readouts">
+            <div><dt>~30 min</dt><dd>turnaround, down from ~48 hours</dd></div>
+          </dl>
+        </div>
+        <p class="stack">PyTorch · CUDA · mixed precision</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- TALKS -->
+  <section class="section" id="talks" aria-labelledby="talks-h">
+    <div class="row section-head" data-mark>
+      <div class="margin"><p class="label">Talks</p></div>
+      <div class="body"><h2 id="talks-h" class="section-title">Talks at GDG Lahore DevFest.</h2></div>
+    </div>
+
+    <ol class="talks">
+      <li class="row" data-mark>
+        <div class="margin"><p class="date">Dec 2025</p><p class="meta">DevFest Lahore</p></div>
+        <div class="body talk">
+          <a class="thumb" href="https://www.youtube.com/watch?v=KZxQbs7nz_8" aria-label="Watch Imagen: Breaking LLM Intuition on YouTube">
+            <span class="thumb-text">DevFest<br>2025</span>
+            <img src="https://i.ytimg.com/vi/KZxQbs7nz_8/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+            <span class="play">Watch</span>
+          </a>
+          <div>
+            <h3>Imagen: Breaking LLM Intuition</h3>
+            <p>Why generative image models aren’t just visual LLMs, and why that distinction matters when you’re building with them. Outputs are sampled, not computed, and realism can show up without any understanding behind it.</p>
+            <a class="watch" href="https://www.youtube.com/watch?v=KZxQbs7nz_8">Watch on YouTube</a>
+          </div>
+        </div>
+      </li>
+      <li class="row" data-mark>
+        <div class="margin"><p class="date">Dec 2024</p><p class="meta">DevFest Lahore</p></div>
+        <div class="body talk">
+          <a class="thumb" href="https://www.youtube.com/watch?v=ccGgJAtZ81Y" aria-label="Watch Sleeper Agents: Deceptive LLMs and Safety Training on YouTube">
+            <span class="thumb-text">DevFest<br>2024</span>
+            <img src="https://i.ytimg.com/vi/ccGgJAtZ81Y/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+            <span class="play">Watch</span>
+          </a>
+          <div>
+            <h3>Sleeper Agents: Deceptive LLMs &amp; Safety Training</h3>
+            <p>Can safety training remove deceptive behaviour that has been trained into an LLM? I went through current research on model reliability, sleeper-agent models, and how unintended behavioural patterns can emerge and survive during training.</p>
+            <a class="watch" href="https://www.youtube.com/watch?v=ccGgJAtZ81Y">Watch on YouTube</a>
+          </div>
+        </div>
+      </li>
+      <li class="row" data-mark>
+        <div class="margin"><p class="date">Dec 2023</p><p class="meta">DevFest Lahore</p></div>
+        <div class="body talk">
+          <a class="thumb" href="https://www.youtube.com/watch?v=TmFkEk8V2S8" aria-label="Watch Unlocking Quantum Potential with Cirq and TensorFlow on YouTube">
+            <span class="thumb-text">DevFest<br>2023</span>
+            <img src="https://i.ytimg.com/vi/TmFkEk8V2S8/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+            <span class="play">Watch</span>
+          </a>
+          <div>
+            <h3>Unlocking Quantum Potential with Cirq and TensorFlow Quantum</h3>
+            <p>A workshop on building and training your own quantum machine learning model with Google Cirq and TensorFlow Quantum, and where quantum ML models have done better than classical ones on quantum data.</p>
+            <a class="watch" href="https://www.youtube.com/watch?v=TmFkEk8V2S8">Watch on YouTube</a>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- LOG -->
+  <section class="section" id="log" aria-labelledby="log-h">
+    <div class="row section-head" data-mark>
+      <div class="margin"><p class="label">Experience</p></div>
+      <div class="body"><h2 id="log-h" class="section-title">Where I’ve worked and studied.</h2></div>
+    </div>
+
+    <ol class="log">
+      <li class="row" data-mark>
+        <div class="margin"><p class="date"><span>Jul 2025 –</span> <span>Oct 2026</span></p></div>
+        <div class="body">
+          <h3>AI Engineer, Agents &amp; LLM Infrastructure <span class="at">IgniteTech, via Crossover · remote</span></h3>
+          <p>LLM serving, agents and MCP tooling, Langfuse tracing, and Kafka services on Kubernetes.</p>
+        </div>
+      </li>
+      <li class="row" data-mark>
+        <div class="margin"><p class="date"><span>Mar –</span> <span>Oct 2025</span></p></div>
+        <div class="body">
+          <h3>Computer Vision Engineer <span class="at">Brick &amp; Mortar AI · Lahore</span></h3>
+          <p>Few-shot classification and its evaluation, multi-camera tracking and ReID, and TensorRT/Triton deployment.</p>
+        </div>
+      </li>
+      <li class="row" data-mark>
+        <div class="margin"><p class="date"><span>Nov 2024 –</span> <span>Mar 2025</span></p></div>
+        <div class="body">
+          <h3>Computer Vision Engineer <span class="at">NextBridge · Lahore</span></h3>
+          <p>The WebRTC control stack for a smart wheelchair.</p>
+        </div>
+      </li>
+      <li class="row" data-mark>
+        <div class="margin"><p class="date"><span>Nov 2023 –</span> <span>Nov 2024</span></p></div>
+        <div class="body">
+          <h3>Machine Learning Engineer <span class="at">Powersoft19 · Lahore</span></h3>
+          <p>Fault and anomaly detection on device telemetry, and CUDA/PyTorch optimisation.</p>
+        </div>
+      </li>
+      <li class="row" data-mark>
+        <div class="margin"><p class="date"><span>Nov 2022 –</span> <span>Nov 2023</span></p></div>
+        <div class="body">
+          <h3>Research Engineer <span class="at">KICS, Center for Language Engineering, UET Lahore</span></h3>
+          <p>I read primary literature on retrieval-augmented generation and text encoding and reproduced methods from it. I also built Tajziyakar, a containerised OCR and segmentation pipeline that extracts and flags TV news ticker content at archive scale.</p>
+        </div>
+      </li>
+      <li class="row" data-mark>
+        <div class="margin"><p class="date">2023</p></div>
+        <div class="body">
+          <h3>BSc Electrical Engineering <span class="at">University of Engineering &amp; Technology, Lahore</span></h3>
+          <p>I led our final-year project. We captured benign and attack traffic from a live IoT testbed rather than using a public benchmark, compared an LSTM over traffic sequences against Random Forest and XGBoost flow baselines, and deployed on a Jetson to weigh accuracy against real edge latency and memory.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- OUTSIDE WORK -->
+  <section class="section" id="outside" aria-labelledby="outside-h">
+    <div class="row" data-mark>
+      <div class="margin"><p class="label">Outside work</p></div>
+      <div class="body">
+        <h2 id="outside-h" class="section-title">Teaching and awards</h2>
+        <div class="columns">
+          <div>
+            <h3 class="small-h">Teaching</h3>
+            <ul class="plain">
+              <li><strong>Tech Sahelis, Hunza, 2026.</strong> With IEI Pakistan, I spent a week with 15 girls in Hunza, starting from Python fundamentals. By the end of the week they had built a trip-planning app and deployed it on Streamlit. As a student I always hated being left in a black box about what happens to your app after a coding session, so it was important to me that they learned about servers and deployment too, and could share what they built.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="small-h">Awards</h3>
+            <ul class="plain">
+              <li><strong>CureMD Master Inventor Award, 2022.</strong> For a cancer-treatment-assistant bot for oncologists, built during an AI internship automating oncology guideline processing (about 50% less manual effort).</li>
+              <li><strong>COHACK by DevNation, 2022.</strong> Hackathon winner.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="small-h small-h--gap">Toolkit</h3>
+        <dl class="toolkit">
+          <div><dt>Core</dt><dd>Python, PyTorch, NumPy, TypeScript, C++, SQL, FastAPI</dd></div>
+          <div><dt>Training &amp; evaluation</dt><dd>Few-shot and metric learning, prototypical networks, episodic eval harnesses, leakage-aware split design, anomaly detection, MLflow</dd></div>
+          <div><dt>LLM inference &amp; agents</dt><dd>vLLM, open-weight model serving, RAG, LangChain, MCP, Langfuse, Claude Code, Codex, Cursor</dd></div>
+          <div><dt>GPUs &amp; deployment</dt><dd>CUDA, mixed precision, ONNX, TensorRT, Triton Inference Server, Jetson, Docker, Kubernetes, Kafka, CI/CD</dd></div>
+          <div><dt>Real-time</dt><dd>WebRTC (signalling, SDP/ICE, reconnection, latency instrumentation), RTSP, ROS 2, gRPC</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact" aria-labelledby="contact-h">
+    <div class="row" data-mark>
+      <div class="margin"><p class="label">Contact</p></div>
+      <div class="body">
+        <h2 id="contact-h" class="claim">Get in touch</h2>
+        <p class="lede">Email and LinkedIn are the best ways to reach me.</p>
+        <div class="email-row">
+          <a class="btn btn--big" href="mailto:haleematallat019@gmail.com">haleematallat019@gmail.com</a>
+          <button class="copy" type="button" data-copy="haleematallat019@gmail.com">Copy address</button>
+          <a class="btn btn--big btn--line" href="https://www.linkedin.com/in/haleema-tallat" rel="me">LinkedIn</a>
+        </div>
+        <ul class="links links--quiet">
+          <li><a href="haleema-tallat-resume.pdf">Résumé <span class="dim">PDF</span></a></li>
+          <li><a href="https://github.com/haleematallat" rel="me">GitHub</a></li>
+          <li><a href="#talks">Talks</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Haleema Tallat · Lahore, Pakistan</p>
+  <p class="dim">Hosted on GitHub Pages. Updated October 2026.</p>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
