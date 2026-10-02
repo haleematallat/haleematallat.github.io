@@ -342,35 +342,47 @@
         <div class="margin"><p class="date"><span>Jul 2025 –</span> <span>Oct 2026</span></p></div>
         <div class="body">
           <h3>AI Engineer, Agents &amp; LLM Infrastructure <span class="at">IgniteTech, via Crossover · remote</span></h3>
-          <p>LLM serving, agents and MCP tooling, Langfuse tracing, and Kafka services on Kubernetes.</p>
+          <p>I designed and built the platform’s first production-grade social engine in about three months: a multi-tenant system handling 1,000+ live customer interactions a day across 10–15 social and messaging channels, from ingestion and parallel processing to publishing replies in each channel’s format. Its playbook and operator runbooks became the template for 20 further engines.</p>
+          <p>I also built the distributed multi-agent platform my team used for software development, running up to 500 long-running coding agents (LangGraph on Ray, Kafka, Redis, PostgreSQL, Qdrant and sandboxed tools, on Kubernetes on AWS), and its observability layer: Langfuse tracing of full agent trajectories, with run data in ClickHouse for cost analysis, failure diagnosis and behavioural evaluation.</p>
+          <p>Alongside that, I built the LLM inference layer (self-hosted vLLM and Hugging Face models with the Anthropic API) behind agent runs and AI-drafted replies for support agents; scaled Kafka pipelines for up to 27 channel engines with KEDA autoscaling, splitting Java monoliths into TypeScript services with 6–10× less memory and ~20× faster startup; and designed the organisation’s MCP architecture, exposing GitHub, Jira, Confluence, CI/CD and infrastructure as governed tools to Claude Code, Cursor and internal agents.</p>
         </div>
       </li>
       <li class="row" data-mark>
         <div class="margin"><p class="date"><span>Mar –</span> <span>Oct 2025</span></p></div>
         <div class="body">
           <h3>Computer Vision Engineer <span class="at">Brick &amp; Mortar AI · Lahore</span></h3>
-          <p>Fine-tuning vision models on client data: few-shot classification and its evaluation, multi-camera tracking and ReID, and TensorRT/Triton deployment.</p>
+          <p>I found and fixed a broken evaluation harness on a fine-tuned ResNet-12 few-shot classifier (split leakage and mismatched support sizes and episode ways). Under the corrected 11-way protocol it scored 89.7%, against the 46.7% reported before.</p>
+          <p>I also built and shipped multi-camera tracking and re-identification: YOLOv8/v11 segmentation and 512-d ReID embeddings from person pixels only, cutting identity switches by 20%, served on Triton through ONNX and TensorRT, with GPU-accelerated RTSP decoding for ~10–15× throughput.</p>
         </div>
       </li>
       <li class="row" data-mark>
         <div class="margin"><p class="date"><span>Nov 2024 –</span> <span>Mar 2025</span></p></div>
         <div class="body">
           <h3>Computer Vision Engineer <span class="at">NextBridge · Lahore</span></h3>
-          <p>The WebRTC control stack for a smart wheelchair.</p>
+          <p>I built the end-to-end WebRTC control stack for a smart wheelchair: a signalling server, a joystick sender and a Jetson ROS&nbsp;2 receiver on the chair, with heartbeat and timeout detection, backoff reconnection, a watchdog that stops the chair on link loss, and latency instrumentation.</p>
         </div>
       </li>
       <li class="row" data-mark>
         <div class="margin"><p class="date"><span>Nov 2023 –</span> <span>Nov 2024</span></p></div>
         <div class="body">
           <h3>Machine Learning Engineer <span class="at">Powersoft19 · Lahore</span></h3>
-          <p>Fault and anomaly detection on device telemetry, and CUDA/PyTorch optimisation.</p>
+          <p>I built distributed infrastructure for real-time fault detection on equipment sensor data using custom neural networks, cutting detection time from 48 hours to 30 minutes.</p>
+          <p>I also architected a production RAG system indexing technical documents across data centres, with custom-trained domain adapters, which cut field engineers’ problem-resolution time by 90%; and built an ML experimentation platform with CLI tools, monitoring dashboards and GitHub integration that let 200+ engineers deploy and track experiments, taking setup from days to hours.</p>
         </div>
       </li>
       <li class="row" data-mark>
         <div class="margin"><p class="date"><span>Nov 2022 –</span> <span>Nov 2023</span></p></div>
         <div class="body">
           <h3>Research Engineer <span class="at">KICS, Center for Language Engineering, UET Lahore</span></h3>
-          <p>I read primary literature on retrieval-augmented generation and text encoding and reproduced methods from it. I also built Tajziyakar, a containerised OCR and segmentation pipeline that extracts and flags TV news ticker content at archive scale.</p>
+          <p>I developed a distributed OCR pipeline for large archives of historical documents, reaching 98% accuracy with custom transformer models and automated quality control, and a containerised deployment with automated failover that processed 1M+ pages a day at 99.9% uptime.</p>
+          <p>I also built tools for rapid prototyping of ML models, with automated experiment tracking and distributed training, so researchers could test hypotheses about 5× faster.</p>
+        </div>
+      </li>
+      <li class="row" data-mark>
+        <div class="margin"><p class="date"><span>Jul –</span> <span>Sep 2022</span></p></div>
+        <div class="body">
+          <h3>AI Intern <span class="at">CureMD · Lahore</span></h3>
+          <p>I engineered a processing pipeline for cancer-treatment guidelines that cut manual processing time by 50% and raised data accuracy to 99.5%, with GitHub Actions CI/CD for testing and deploying the document-processing models daily.</p>
         </div>
       </li>
       <li class="row" data-mark>
