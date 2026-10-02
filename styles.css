@@ -255,6 +255,23 @@ h1 {
 .log .at { display: block; font-size: 12.5px; font-weight: 400; color: var(--graphite); margin-top: 4px; }
 .log p { margin-top: 10px; color: var(--graphite); max-width: 62ch; font-size: 16px; }
 
+/* ---------- experience: job header with its work beneath ---------- */
+.job-head { padding-top: 28px; padding-bottom: 6px; }
+.job-head .body { border-top: 1px solid var(--rule); padding-top: 28px; }
+.job-head .margin { padding-top: 28px; }
+.job-head .date { margin-top: 0; color: var(--ink); }
+.job-head h3 { font-size: 20px; font-weight: 600; line-height: 1.35; }
+.job-head .at { display: block; font-size: 12.5px; font-weight: 400; color: var(--graphite); margin-top: 4px; }
+.job-head p { margin-top: 10px; color: var(--graphite); max-width: 62ch; font-size: 16px; }
+.job-head p + p { margin-top: 12px; }
+.job .case { padding-top: 18px; padding-bottom: 22px; }
+.job .case .body { border-left: 2px solid var(--rule); padding-left: 24px; }
+.job .case + .case .body { border-top: 0; padding-top: 0; }
+.job .case + .case .margin { padding-top: 0; }
+.job .case h3 { font-size: clamp(20px, 2vw, 24px); margin-bottom: 14px; }
+.job .case--feature h3 { font-size: clamp(24px, 2.6vw, 32px); }
+.job:last-child { padding-bottom: 24px; }
+
 /* ---------- also ---------- */
 .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .small-h { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 500; color: var(--graphite); margin-bottom: 16px; }
@@ -310,6 +327,11 @@ h1 {
   .case + .case { border-top: 1px solid var(--rule); }
   .log > li { border-top: 1px solid var(--rule); }
   .log > li .body { border-top: 0; padding-top: 0; }
+  .job-head { border-top: 1px solid var(--rule); }
+  .job-head .margin { padding-top: 0; }
+  .job-head .body { border-top: 0; padding-top: 0; }
+  .job .case { border-top: 0; }
+  .job .case .body { padding-left: 16px; }
   .talks > li { border-top: 1px solid var(--rule); }
   .talks > li .margin { padding-top: 0; }
   .talks > li .body { border-top: 0; padding-top: 0; }

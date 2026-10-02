@@ -26,15 +26,15 @@
 </script>
 </head>
 <body>
-<a class="skip" href="#work">Skip to work</a>
+<a class="skip" href="#log">Skip to experience</a>
 
 <header class="top">
   <a class="brand" href="#top">Haleema Tallat</a>
   <nav aria-label="Sections">
     <a href="#research">Research</a>
-    <a href="#work">Work</a>
-    <a href="#talks">Talks</a>
     <a href="#log">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#talks">Talks</a>
     <a href="#contact">Contact</a>
   </nav>
   <button class="theme" type="button" aria-label="Switch colour theme"><span data-theme-label>Dark</span></button>
@@ -84,52 +84,228 @@
     </div>
   </section>
 
-  <!-- WORK -->
-  <section class="section" id="work" aria-labelledby="work-h">
+  <!-- EXPERIENCE -->
+  <section class="section" id="log" aria-labelledby="log-h">
     <div class="row section-head" data-mark>
-      <div class="margin"><p class="label">Selected work</p></div>
-      <div class="body"><h2 id="work-h" class="section-title">Some of the things I’ve built and shipped.</h2></div>
+      <div class="margin"><p class="label">Experience</p></div>
+      <div class="body"><h2 id="log-h" class="section-title">Where I’ve worked and studied, and what I built there.</h2></div>
     </div>
 
-    <!-- evaluation -->
-    <article class="row case case--feature" data-mark>
-      <div class="margin">
-        <p class="label">Evaluation</p>
-        <p class="meta"><span>Brick &amp; Mortar AI</span> <span>2025</span></p>
-      </div>
-      <div class="body">
-        <h3>Fixing the evaluation of a few-shot barcode classifier</h3>
-        <p>I fine-tuned a ResNet-12 prototypical-network classifier on damaged and glared barcode images, then found the reported numbers were an artefact of the harness. There was split leakage, a 1-shot vs 3–40-shot support mismatch, and a 3-way vs 11-way evaluation mismatch. I rebuilt the held-out split and the episode sampler. Under the corrected 11-way protocol the model reached 89.7% validation accuracy, against the 46.7% that had been reported.</p>
-
-        <figure class="instrument" data-protocol="reported">
-          <div class="instrument-head">
-            <span class="label">Evaluation protocol</span>
-            <div class="switch" role="group" aria-label="Evaluation protocol">
-              <button type="button" data-set="reported" aria-pressed="true">Original</button>
-              <button type="button" data-set="corrected" aria-pressed="false">Corrected</button>
-            </div>
+    <div class="jobs">
+      <div class="job">
+        <div class="row job-head" data-mark>
+          <div class="margin"><p class="date"><span>Jul 2025 –</span> <span>Oct 2026</span></p></div>
+          <div class="body">
+            <h3>AI Engineer, Agents &amp; LLM Infrastructure <span class="at">IgniteTech, via Crossover · remote</span></h3>
+            <p>I built agent infrastructure and LLM systems for a unified customer-care and social-media platform.</p>
+            <p>That included the distributed multi-agent platform my team used for software development, running up to 500 long-running coding agents (LangGraph on Ray, Kafka, Redis, PostgreSQL, Qdrant and sandboxed tools, on Kubernetes on AWS), and its observability layer: Langfuse tracing of full agent trajectories, with run data in ClickHouse for cost analysis, failure diagnosis and behavioural evaluation. The social engine below was built with it.</p>
           </div>
-          <div class="gauge">
-            <p class="gauge-value"><span data-acc>46.7</span><small>%</small></p>
-            <p class="gauge-caption" data-caption>Validation accuracy under the original harness</p>
-            <p class="visually-hidden" data-announce aria-live="polite"></p>
-            <div class="scale" aria-hidden="true">
-              <div class="scale-fill"></div>
-              <span style="left:0">0</span><span style="left:50%">50</span><span style="left:100%">100</span>
+        </div>
+      <article class="row case">
+        <div class="margin">
+          <p class="label">LLM inference</p>
+        </div>
+        <div class="body">
+          <h3>Self-hosted LLM serving for a customer-care platform</h3>
+          <div class="split">
+            <div>
+              <p>I built and owned the LLM inference layer, self-hosted vLLM and Hugging Face models alongside the Anthropic API, serving agent runs and AI-drafted responses for human support agents. That covered everything from model hosting through to the product request path. Automated conversations and human escalation are routed into the same care workspace, so bots and agents work over one channel.</p>
+              <p>I also designed and built the platform’s first production-grade social engine in about three months. I then generalised it into an implementation playbook and operator runbooks, and 20 more engines have shipped from that template.</p>
             </div>
+            <dl class="readouts">
+              <div><dt>1,000+</dt><dd>customer interactions a day</dd></div>
+              <div><dt>10–15</dt><dd>messaging channels</dd></div>
+              <div><dt>20</dt><dd>engines shipped from the template</dd></div>
+            </dl>
           </div>
-          <dl class="checks">
-            <div><dt>Train / validation split</dt><dd><span class="r">Leakage between splits</span><span class="c">Held-out split rebuilt</span></dd></div>
-            <div><dt>Support set</dt><dd><span class="r">1-shot vs 3–40-shot</span><span class="c">Consistent support size</span></dd></div>
-            <div><dt>Episodes</dt><dd><span class="r">3-way</span><span class="c">11-way</span></dd></div>
-          </dl>
-          <figcaption class="dim">Same model and data, evaluated two ways.</figcaption>
-        </figure>
-        <p class="stack">PyTorch · ResNet-12 · prototypical networks · episodic evaluation</p>
+          <p class="stack">vLLM · Python · TypeScript · Kafka</p>
+        </div>
+      </article>
+      <article class="row case">
+        <div class="margin">
+          <p class="label">Agents</p>
+        </div>
+        <div class="body">
+          <h3>An agent that checks business rules instead of guessing them</h3>
+          <p>I built an AI agent with Claude and MCP, and the most interesting part wasn’t the model - it was how we structured domain knowledge. We converted business rules from documentation into a machine-readable schema: required fields, validation logic, routing criteria and acceptable values, all explicitly defined in a format the agent can query and check against. This isn’t RAG or vector search - it’s structured data the agent can reason over. It was built and deployed in a few days and handles real service requests.</p>
+          <blockquote class="pull">
+            <p>If the rules exist only in documentation, the agent is guessing. If they’re structured data, the agent knows.</p>
+            <footer><a href="https://www.linkedin.com/in/haleema-tallat/recent-activity/all/">From my LinkedIn post</a></footer>
+          </blockquote>
+          <p>The agent runs on the organisation’s MCP architecture, which I designed: a governed layer exposing GitHub, Jira, Confluence, CI/CD and infrastructure as controlled tools to Claude Code, Cursor and our internal autonomous software-development platform. I also authored shared skills that are reused across clients.</p>
+          <p class="stack">Claude · MCP · Langfuse · Claude Code · Cursor</p>
+        </div>
+      </article>
+      <article class="row case">
+        <div class="margin">
+          <p class="label">Infrastructure</p>
+        </div>
+        <div class="body">
+          <h3>Event processing on Kafka and Kubernetes</h3>
+          <div class="split">
+            <p>Kafka pipelines for up to 27 channel engines, with KEDA lag-based autoscaling, Prometheus monitoring and graceful draining. I decomposed Java monoliths into stateless Node/TypeScript services on Kubernetes.</p>
+            <dl class="readouts">
+              <div><dt>6–10×</dt><dd>less memory</dd></div>
+              <div><dt>~20×</dt><dd>faster startup</dd></div>
+            </dl>
+          </div>
+          <p class="stack">Kafka · KEDA · Kubernetes · Prometheus · TypeScript</p>
+        </div>
+      </article>
       </div>
-    </article>
+      <div class="job">
+        <div class="row job-head" data-mark>
+          <div class="margin"><p class="date"><span>Mar –</span> <span>Oct 2025</span></p></div>
+          <div class="body">
+            <h3>Computer Vision Engineer <span class="at">Brick &amp; Mortar AI · Lahore</span></h3>
+            <p>Fine-tuning vision models on client data, checking that their evaluation holds up, and taking them to production.</p>
+          </div>
+        </div>
+      <article class="row case case--feature">
+        <div class="margin">
+          <p class="label">Evaluation</p>
+        </div>
+        <div class="body">
+          <h3>Fixing the evaluation of a few-shot barcode classifier</h3>
+          <p>I fine-tuned a ResNet-12 prototypical-network classifier on damaged and glared barcode images, then found the reported numbers were an artefact of the harness. There was split leakage, a 1-shot vs 3–40-shot support mismatch, and a 3-way vs 11-way evaluation mismatch. I rebuilt the held-out split and the episode sampler. Under the corrected 11-way protocol the model reached 89.7% validation accuracy, against the 46.7% that had been reported.</p>
 
-    <!-- open source -->
+          <figure class="instrument" data-protocol="reported">
+            <div class="instrument-head">
+              <span class="label">Evaluation protocol</span>
+              <div class="switch" role="group" aria-label="Evaluation protocol">
+                <button type="button" data-set="reported" aria-pressed="true">Original</button>
+                <button type="button" data-set="corrected" aria-pressed="false">Corrected</button>
+              </div>
+            </div>
+            <div class="gauge">
+              <p class="gauge-value"><span data-acc>46.7</span><small>%</small></p>
+              <p class="gauge-caption" data-caption>Validation accuracy under the original harness</p>
+              <p class="visually-hidden" data-announce aria-live="polite"></p>
+              <div class="scale" aria-hidden="true">
+                <div class="scale-fill"></div>
+                <span style="left:0">0</span><span style="left:50%">50</span><span style="left:100%">100</span>
+              </div>
+            </div>
+            <dl class="checks">
+              <div><dt>Train / validation split</dt><dd><span class="r">Leakage between splits</span><span class="c">Held-out split rebuilt</span></dd></div>
+              <div><dt>Support set</dt><dd><span class="r">1-shot vs 3–40-shot</span><span class="c">Consistent support size</span></dd></div>
+              <div><dt>Episodes</dt><dd><span class="r">3-way</span><span class="c">11-way</span></dd></div>
+            </dl>
+            <figcaption class="dim">Same model and data, evaluated two ways.</figcaption>
+          </figure>
+          <p class="stack">PyTorch · ResNet-12 · prototypical networks · episodic evaluation</p>
+        </div>
+      </article>
+      <article class="row case">
+        <div class="margin">
+          <p class="label">Computer vision</p>
+        </div>
+        <div class="body">
+          <h3>Multi-camera tracking and re-identification</h3>
+          <div class="split">
+            <p>The pipeline runs YOLOv8/v11 segmentation, computes 512-d ReID embeddings from segmented person pixels only, then associates people across cameras. This cut identity switches by 20% compared with the full-bounding-box baseline. I took it to production: PyTorch to ONNX to TensorRT, the Triton configuration, a custom Triton ReID backend with a re-tuned matching threshold, and fixes for the shape-mismatch and runner-registration failures in the deployed stack. GPU-accelerated RTSP decoding raised throughput 10–15× over naive full-resolution decoding.</p>
+            <dl class="readouts">
+              <div><dt>−20%</dt><dd>identity switches</dd></div>
+              <div><dt>10–15×</dt><dd>pipeline throughput</dd></div>
+            </dl>
+          </div>
+          <p class="stack">YOLOv8/v11 · ONNX · TensorRT · Triton Inference Server</p>
+        </div>
+      </article>
+      </div>
+      <div class="job">
+        <div class="row job-head" data-mark>
+          <div class="margin"><p class="date"><span>Nov 2024 –</span> <span>Mar 2025</span></p></div>
+          <div class="body">
+            <h3>Computer Vision Engineer <span class="at">NextBridge · Lahore</span></h3>
+            <p>Real-time control for a smart wheelchair.</p>
+          </div>
+        </div>
+      <article class="row case">
+        <div class="margin">
+          <p class="label">Real-time</p>
+        </div>
+        <div class="body">
+          <h3>WebRTC control for a smart wheelchair</h3>
+          <p>I built the end-to-end WebRTC control stack: a signalling server (SDP offer/answer, ICE negotiation), a joystick-driven sender, and a Jetson-based ROS&nbsp;2 receiver deployed on the chair. Since someone is sitting in it, connection resilience mattered most. There is heartbeat and timeout detection, exponential-backoff reconnection, and a safety watchdog that force-stops the chair on link loss. I also instrumented round-trip latency across the live link for continuous tuning, and streamed the on-device camera feed into the control loop as groundwork for vision-based navigation.</p>
+          <figure class="flow" aria-label="Control path from joystick to motors">
+            <ol>
+              <li><span class="node">Joystick sender</span></li>
+              <li class="edge"><span>SDP · ICE</span></li>
+              <li><span class="node">Signalling server</span></li>
+              <li class="edge"><span>WebRTC</span></li>
+              <li><span class="node">Jetson · ROS 2</span></li>
+              <li class="edge"><span>drive</span></li>
+              <li><span class="node">Motors</span></li>
+            </ol>
+            <figcaption><span class="tag">Watchdog</span> link lost: force-stop the chair, then reconnect with backoff.</figcaption>
+          </figure>
+          <p class="stack">WebRTC · ROS 2 · NVIDIA Jetson · Python</p>
+        </div>
+      </article>
+      </div>
+      <div class="job">
+        <div class="row job-head" data-mark>
+          <div class="margin"><p class="date"><span>Nov 2023 –</span> <span>Nov 2024</span></p></div>
+          <div class="body">
+            <h3>Machine Learning Engineer <span class="at">Powersoft19 · Lahore</span></h3>
+            <p>Alongside the fault-detection work below, I architected a production RAG system indexing technical documents across data centres, with custom-trained domain adapters, which cut field engineers’ problem-resolution time by 90%; and built an ML experimentation platform with CLI tools, monitoring dashboards and GitHub integration that let 200+ engineers deploy and track experiments, taking setup from days to hours.</p>
+          </div>
+        </div>
+      <article class="row case">
+        <div class="margin">
+          <p class="label">Anomaly detection</p>
+        </div>
+        <div class="body">
+          <h3>Fault detection on device telemetry</h3>
+          <div class="split">
+            <p>I owned real-time fault and anomaly detection on device telemetry, built on custom neural networks, from data to production. It replaced manual visual inspection, and I optimised the CUDA/PyTorch side with mixed-precision training, pinned-memory host-to-device transfers and channels-last layout for tensor-core utilisation.</p>
+            <dl class="readouts">
+              <div><dt>~30 min</dt><dd>turnaround, down from ~48 hours</dd></div>
+            </dl>
+          </div>
+          <p class="stack">PyTorch · CUDA · mixed precision</p>
+        </div>
+      </article>
+      </div>
+      <div class="job">
+        <div class="row job-head" data-mark>
+          <div class="margin"><p class="date"><span>Nov 2022 –</span> <span>Nov 2023</span></p></div>
+          <div class="body">
+            <h3>Research Engineer <span class="at">KICS, Center for Language Engineering, UET Lahore</span></h3>
+            <p>I developed a distributed OCR pipeline for large archives of historical documents, reaching 98% accuracy with custom transformer models and automated quality control, and a containerised deployment with automated failover that processed 1M+ pages a day at 99.9% uptime.</p>
+            <p>I also read primary literature on retrieval-augmented generation and text encoding and reproduced methods from it, built Tajziyakar, a containerised OCR and segmentation pipeline that extracts and flags TV news ticker content at archive scale, and built tools for rapid prototyping of ML models, with automated experiment tracking and distributed training, so researchers could test hypotheses about 5× faster.</p>
+          </div>
+        </div>
+      </div>
+      <div class="job">
+        <div class="row job-head" data-mark>
+          <div class="margin"><p class="date"><span>Jul –</span> <span>Sep 2022</span></p></div>
+          <div class="body">
+            <h3>AI Intern <span class="at">CureMD · Lahore</span></h3>
+            <p>I engineered a processing pipeline for cancer-treatment guidelines that cut manual processing time by 50% and raised data accuracy to 99.5%, with GitHub Actions CI/CD for testing and deploying the document-processing models daily.</p>
+          </div>
+        </div>
+      </div>
+      <div class="job">
+        <div class="row job-head" data-mark>
+          <div class="margin"><p class="date">2023</p></div>
+          <div class="body">
+            <h3>BSc Electrical Engineering <span class="at">University of Engineering &amp; Technology, Lahore</span></h3>
+            <p>I led our final-year project. We captured benign and attack traffic from a live IoT testbed rather than using a public benchmark, compared an LSTM over traffic sequences against Random Forest and XGBoost flow baselines, and deployed on a Jetson to weigh accuracy against real edge latency and memory.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects" aria-labelledby="projects-h">
+    <div class="row section-head" data-mark>
+      <div class="margin"><p class="label">Projects</p></div>
+      <div class="body"><h2 id="projects-h" class="section-title">Personal projects.</h2></div>
+    </div>
+
     <article class="row case" data-mark>
       <div class="margin">
         <p class="label">Open source</p>
@@ -148,128 +324,6 @@
           </dl>
         </div>
         <p class="stack">PyTorch · Triton Inference Server · Docker · Redis · GitHub Actions · <a href="https://github.com/haleematallat/inference-pipeline">View on GitHub</a></p>
-      </div>
-    </article>
-
-    <!-- llm -->
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">LLM inference</p>
-        <p class="meta"><span>IgniteTech</span> <span>2025–26</span></p>
-      </div>
-      <div class="body">
-        <h3>Self-hosted LLM serving for a customer-care platform</h3>
-        <div class="split">
-          <div>
-            <p>I built and owned the self-hosted LLM serving layer behind AI-drafted responses for human support agents, on a unified customer-care and social-media platform. That covered everything from model hosting through to the product request path. Automated conversations and human escalation are routed into the same care workspace, so bots and agents work over one channel.</p>
-            <p>I also designed and built the platform’s first production-grade social engine in about three months. I then generalised it into an implementation playbook and operator runbooks, and 20 more engines have shipped from that template.</p>
-          </div>
-          <dl class="readouts">
-            <div><dt>1,000+</dt><dd>customer interactions a day</dd></div>
-            <div><dt>10–15</dt><dd>messaging channels</dd></div>
-            <div><dt>20</dt><dd>engines shipped from the template</dd></div>
-          </dl>
-        </div>
-        <p class="stack">vLLM · Python · TypeScript · Kafka</p>
-      </div>
-    </article>
-
-    <!-- agents -->
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">Agents</p>
-        <p class="meta"><span>IgniteTech</span> <span>2025–26</span></p>
-      </div>
-      <div class="body">
-        <h3>An agent that checks business rules instead of guessing them</h3>
-        <p>I built an AI agent with Claude and MCP, and the most interesting part wasn’t the model - it was how we structured domain knowledge. We converted business rules from documentation into a machine-readable schema: required fields, validation logic, routing criteria and acceptable values, all explicitly defined in a format the agent can query and check against. This isn’t RAG or vector search - it’s structured data the agent can reason over. It was built and deployed in a few days and handles real service requests.</p>
-        <blockquote class="pull">
-          <p>If the rules exist only in documentation, the agent is guessing. If they’re structured data, the agent knows.</p>
-          <footer><a href="https://www.linkedin.com/in/haleema-tallat/recent-activity/all/">From my LinkedIn post</a></footer>
-        </blockquote>
-        <p>I also built internal MCP integrations exposing GitHub, Jira, Confluence and CI/CD as controlled tools to Claude Code, Cursor and an internal autonomous software-development platform. I added Langfuse instrumentation so teams could trace, replay and debug multi-turn LLM and tool-call interactions.</p>
-        <p class="stack">Claude · MCP · Langfuse · Claude Code · Cursor</p>
-      </div>
-    </article>
-
-    <!-- realtime -->
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">Real-time</p>
-        <p class="meta"><span>NextBridge</span> <span>2024–25</span></p>
-      </div>
-      <div class="body">
-        <h3>WebRTC control for a smart wheelchair</h3>
-        <p>I built the end-to-end WebRTC control stack: a signalling server (SDP offer/answer, ICE negotiation), a joystick-driven sender, and a Jetson-based ROS&nbsp;2 receiver deployed on the chair. Since someone is sitting in it, connection resilience mattered most. There is heartbeat and timeout detection, exponential-backoff reconnection, and a safety watchdog that force-stops the chair on link loss. I also instrumented round-trip latency across the live link for continuous tuning, and streamed the on-device camera feed into the control loop as groundwork for vision-based navigation.</p>
-        <figure class="flow" aria-label="Control path from joystick to motors">
-          <ol>
-            <li><span class="node">Joystick sender</span></li>
-            <li class="edge"><span>SDP · ICE</span></li>
-            <li><span class="node">Signalling server</span></li>
-            <li class="edge"><span>WebRTC</span></li>
-            <li><span class="node">Jetson · ROS 2</span></li>
-            <li class="edge"><span>drive</span></li>
-            <li><span class="node">Motors</span></li>
-          </ol>
-          <figcaption><span class="tag">Watchdog</span> link lost: force-stop the chair, then reconnect with backoff.</figcaption>
-        </figure>
-        <p class="stack">WebRTC · ROS 2 · NVIDIA Jetson · Python</p>
-      </div>
-    </article>
-
-    <!-- inference -->
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">Computer vision</p>
-        <p class="meta"><span>Brick &amp; Mortar AI</span> <span>2025</span></p>
-      </div>
-      <div class="body">
-        <h3>Multi-camera tracking and re-identification</h3>
-        <div class="split">
-          <p>The pipeline runs YOLOv8/v11 segmentation, computes 512-d ReID embeddings from segmented person pixels only, then associates people across cameras. This cut identity switches by 20% compared with the full-bounding-box baseline. I took it to production: PyTorch to ONNX to TensorRT, the Triton configuration, a custom Triton ReID backend with a re-tuned matching threshold, and fixes for the shape-mismatch and runner-registration failures in the deployed stack. GPU-accelerated RTSP decoding raised throughput 10–15× over naive full-resolution decoding.</p>
-          <dl class="readouts">
-            <div><dt>−20%</dt><dd>identity switches</dd></div>
-            <div><dt>10–15×</dt><dd>pipeline throughput</dd></div>
-          </dl>
-        </div>
-        <p class="stack">YOLOv8/v11 · ONNX · TensorRT · Triton Inference Server</p>
-      </div>
-    </article>
-
-    <!-- infra -->
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">Infrastructure</p>
-        <p class="meta"><span>IgniteTech</span> <span>2025–26</span></p>
-      </div>
-      <div class="body">
-        <h3>Event processing on Kafka and Kubernetes</h3>
-        <div class="split">
-          <p>Kafka pipelines for up to 27 channel engines, with KEDA lag-based autoscaling, Prometheus monitoring and graceful draining. I decomposed Java monoliths into stateless Node/TypeScript services on Kubernetes.</p>
-          <dl class="readouts">
-            <div><dt>6–10×</dt><dd>less memory</dd></div>
-            <div><dt>~20×</dt><dd>faster startup</dd></div>
-          </dl>
-        </div>
-        <p class="stack">Kafka · KEDA · Kubernetes · Prometheus · TypeScript</p>
-      </div>
-    </article>
-
-    <!-- anomaly -->
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">Anomaly detection</p>
-        <p class="meta"><span>Powersoft19</span> <span>2023–24</span></p>
-      </div>
-      <div class="body">
-        <h3>Fault detection on device telemetry</h3>
-        <div class="split">
-          <p>I owned fault and anomaly detection on device telemetry from data to production. It replaced manual visual inspection, and I optimised the CUDA/PyTorch side with mixed-precision training, pinned-memory host-to-device transfers and channels-last layout for tensor-core utilisation.</p>
-          <dl class="readouts">
-            <div><dt>~30 min</dt><dd>turnaround, down from ~48 hours</dd></div>
-          </dl>
-        </div>
-        <p class="stack">PyTorch · CUDA · mixed precision</p>
       </div>
     </article>
   </section>
@@ -325,71 +379,6 @@
             <p>A workshop on building and training your own quantum machine learning model with Google Cirq and TensorFlow Quantum, and where quantum ML models have done better than classical ones on quantum data.</p>
             <a class="watch" href="https://www.youtube.com/watch?v=TmFkEk8V2S8">Watch on YouTube</a>
           </div>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- LOG -->
-  <section class="section" id="log" aria-labelledby="log-h">
-    <div class="row section-head" data-mark>
-      <div class="margin"><p class="label">Experience</p></div>
-      <div class="body"><h2 id="log-h" class="section-title">Where I’ve worked and studied.</h2></div>
-    </div>
-
-    <ol class="log">
-      <li class="row" data-mark>
-        <div class="margin"><p class="date"><span>Jul 2025 –</span> <span>Oct 2026</span></p></div>
-        <div class="body">
-          <h3>AI Engineer, Agents &amp; LLM Infrastructure <span class="at">IgniteTech, via Crossover · remote</span></h3>
-          <p>I designed and built the platform’s first production-grade social engine in about three months: a multi-tenant system handling 1,000+ live customer interactions a day across 10–15 social and messaging channels, from ingestion and parallel processing to publishing replies in each channel’s format. Its playbook and operator runbooks became the template for 20 further engines.</p>
-          <p>I also built the distributed multi-agent platform my team used for software development, running up to 500 long-running coding agents (LangGraph on Ray, Kafka, Redis, PostgreSQL, Qdrant and sandboxed tools, on Kubernetes on AWS), and its observability layer: Langfuse tracing of full agent trajectories, with run data in ClickHouse for cost analysis, failure diagnosis and behavioural evaluation.</p>
-          <p>Alongside that, I built the LLM inference layer (self-hosted vLLM and Hugging Face models with the Anthropic API) behind agent runs and AI-drafted replies for support agents; scaled Kafka pipelines for up to 27 channel engines with KEDA autoscaling, splitting Java monoliths into TypeScript services with 6–10× less memory and ~20× faster startup; and designed the organisation’s MCP architecture, exposing GitHub, Jira, Confluence, CI/CD and infrastructure as governed tools to Claude Code, Cursor and internal agents.</p>
-        </div>
-      </li>
-      <li class="row" data-mark>
-        <div class="margin"><p class="date"><span>Mar –</span> <span>Oct 2025</span></p></div>
-        <div class="body">
-          <h3>Computer Vision Engineer <span class="at">Brick &amp; Mortar AI · Lahore</span></h3>
-          <p>I found and fixed a broken evaluation harness on a fine-tuned ResNet-12 few-shot classifier (split leakage and mismatched support sizes and episode ways). Under the corrected 11-way protocol it scored 89.7%, against the 46.7% reported before.</p>
-          <p>I also built and shipped multi-camera tracking and re-identification: YOLOv8/v11 segmentation and 512-d ReID embeddings from person pixels only, cutting identity switches by 20%, served on Triton through ONNX and TensorRT, with GPU-accelerated RTSP decoding for ~10–15× throughput.</p>
-        </div>
-      </li>
-      <li class="row" data-mark>
-        <div class="margin"><p class="date"><span>Nov 2024 –</span> <span>Mar 2025</span></p></div>
-        <div class="body">
-          <h3>Computer Vision Engineer <span class="at">NextBridge · Lahore</span></h3>
-          <p>I built the end-to-end WebRTC control stack for a smart wheelchair: a signalling server, a joystick sender and a Jetson ROS&nbsp;2 receiver on the chair, with heartbeat and timeout detection, backoff reconnection, a watchdog that stops the chair on link loss, and latency instrumentation.</p>
-        </div>
-      </li>
-      <li class="row" data-mark>
-        <div class="margin"><p class="date"><span>Nov 2023 –</span> <span>Nov 2024</span></p></div>
-        <div class="body">
-          <h3>Machine Learning Engineer <span class="at">Powersoft19 · Lahore</span></h3>
-          <p>I built distributed infrastructure for real-time fault detection on equipment sensor data using custom neural networks, cutting detection time from 48 hours to 30 minutes. I owned it from data to production, replacing manual visual inspection, and optimised the CUDA/PyTorch side with mixed precision, pinned-memory transfers and channels-last layout.</p>
-          <p>I also architected a production RAG system indexing technical documents across data centres, with custom-trained domain adapters, which cut field engineers’ problem-resolution time by 90%; and built an ML experimentation platform with CLI tools, monitoring dashboards and GitHub integration that let 200+ engineers deploy and track experiments, taking setup from days to hours.</p>
-        </div>
-      </li>
-      <li class="row" data-mark>
-        <div class="margin"><p class="date"><span>Nov 2022 –</span> <span>Nov 2023</span></p></div>
-        <div class="body">
-          <h3>Research Engineer <span class="at">KICS, Center for Language Engineering, UET Lahore</span></h3>
-          <p>I developed a distributed OCR pipeline for large archives of historical documents, reaching 98% accuracy with custom transformer models and automated quality control, and a containerised deployment with automated failover that processed 1M+ pages a day at 99.9% uptime.</p>
-          <p>I also read primary literature on retrieval-augmented generation and text encoding and reproduced methods from it, built Tajziyakar, a containerised OCR and segmentation pipeline that extracts and flags TV news ticker content at archive scale, and built tools for rapid prototyping of ML models, with automated experiment tracking and distributed training, so researchers could test hypotheses about 5× faster.</p>
-        </div>
-      </li>
-      <li class="row" data-mark>
-        <div class="margin"><p class="date"><span>Jul –</span> <span>Sep 2022</span></p></div>
-        <div class="body">
-          <h3>AI Intern <span class="at">CureMD · Lahore</span></h3>
-          <p>I engineered a processing pipeline for cancer-treatment guidelines that cut manual processing time by 50% and raised data accuracy to 99.5%, with GitHub Actions CI/CD for testing and deploying the document-processing models daily.</p>
-        </div>
-      </li>
-      <li class="row" data-mark>
-        <div class="margin"><p class="date">2023</p></div>
-        <div class="body">
-          <h3>BSc Electrical Engineering <span class="at">University of Engineering &amp; Technology, Lahore</span></h3>
-          <p>I led our final-year project. We captured benign and attack traffic from a live IoT testbed rather than using a public benchmark, compared an LSTM over traffic sequences against Random Forest and XGBoost flow baselines, and deployed on a Jetson to weigh accuracy against real edge latency and memory.</p>
         </div>
       </li>
     </ol>
