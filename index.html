@@ -69,19 +69,61 @@
 
   <!-- RESEARCH -->
   <section class="section" id="research" aria-labelledby="research-h">
-    <div class="row" data-mark>
+    <div class="row section-head" data-mark>
       <div class="margin"><p class="label">Research interests</p></div>
       <div class="body">
-        <h2 id="research-h" class="section-title">Technical AI alignment and safety</h2>
+        <h2 id="research-h" class="section-title">Technical AI safety involvement</h2>
         <p class="prose">I’m interested in technical AI alignment and safety, and I want to do research and make contributions in this area. A lot of my work in evaluation has been about checking whether a model’s reported behaviour holds up, and that is a big part of safety research too. I’m currently enrolled in BlueDot Impact’s Technical AI Safety course. I was also selected to collaborate on ConspiracyBench, the first research project from Stationhouse, a new San Francisco group building infrastructure for open AI research collaboration. We’re building a benchmark to evaluate whether models believe conspiracy theories, and will then fine-tune a Qwen 3.5 4B model to hill-climb on it.</p>
         <dl class="toolkit research-list">
           <div><dt>Course</dt><dd><a href="https://bluedot.org/courses/technical-ai-safety">Technical AI Safety, BlueDot Impact</a> <span class="dim">· enrolled, 2026</span></dd></div>
           <div><dt>Collaboration</dt><dd><a href="https://www.station-house.net/projects">ConspiracyBench, Stationhouse</a> <span class="dim">· benchmark and fine-tuning, 2026</span></dd></div>
+          <div><dt>Project</dt><dd><a href="https://github.com/haleematallat/leakbench">LeakBench</a> <span class="dim">· Inspect benchmark, 2026</span></dd></div>
           <div><dt>Talk</dt><dd><a href="https://www.youtube.com/watch?v=ccGgJAtZ81Y">Sleeper Agents: Deceptive LLMs &amp; Safety Training</a> <span class="dim">· DevFest Lahore 2024</span></dd></div>
-          <div><dt>Also interested in</dt><dd>Evaluation methodology, generative models</dd></div>
+          <div><dt>Also interested in</dt><dd>Evaluation methodology, red teaming, mechanistic interpretability, generative models</dd></div>
         </dl>
       </div>
     </div>
+
+    <article class="row case" data-mark>
+      <div class="margin">
+        <p class="label">Benchmark</p>
+        <p class="meta"><span>Personal project</span> <span>2026</span></p>
+      </div>
+      <div class="body">
+        <h3><a class="h-link" href="https://github.com/haleematallat/leakbench">LeakBench</a></h3>
+        <div class="split">
+          <div>
+            <p>A 30-task benchmark, built with Inspect, that asks whether an AI agent can find and fix the bugs that make an ML evaluation report the wrong number. 25 tasks plant one bug each, such as train/test leakage, a wrong metric or a broken grader. The other 5 are correct pipelines that only look suspicious, to catch agents that “fix” working code. Each agent works in a Docker sandbox with no network, and a hidden check scores the fix by whether the metric lands in a range every valid fix reaches.</p>
+            <p>Before running any model I checked every task with four solvers and no model: the reference fix, doing nothing, editing the data, and faking the output. Building it surfaced bugs in the benchmark itself, including ranges that rejected valid fixes and stale bytecode that made a correct fix score the same as the bug. On local Qwen 3.5 models, the 9B solved 75% of the bug tasks and the 4B 29%. Without a hint that the pipeline might be wrong, the 4B dropped to 12%.</p>
+          </div>
+          <dl class="readouts">
+            <div><dt>75% vs 29%</dt><dd>bug tasks solved, Qwen 3.5 9B vs 4B</dd></div>
+            <div><dt>120 / 120</dt><dd>no-model validation checks passed</dd></div>
+          </dl>
+        </div>
+        <p class="stack">Inspect · Docker · Python · scikit-learn · Ollama · <a href="https://github.com/haleematallat/leakbench">View on GitHub</a></p>
+      </div>
+    </article>
+
+    <article class="row case" data-mark>
+      <div class="margin">
+        <p class="label">Open research</p>
+        <p class="meta"><span>Stationhouse</span> <span>2026</span></p>
+      </div>
+      <div class="body">
+        <h3><a class="h-link" href="https://huggingface.co/spaces/Station-house/ConspiracyBench">ConspiracyBench</a></h3>
+        <div class="split">
+          <div>
+            <p>An open benchmark from Stationhouse that tests whether language models hold or give way on conspiracy claims under leading and adversarial pressure. I was selected as a research collaborator and work across the scorer, the solver and the question set.</p>
+            <p>The one I’m proudest of fixed the scorer. Qwen 3.5 4B often spent its whole token budget thinking and returned an empty answer, on about half its turns, and the LLM judge still graded those empty answers. That pushed the headline divergence rate to 49%, against about 20% when the model had room to answer. Empty answers are now marked invalid instead of judged, which also halved judge calls, and another contributor reproduced the issue on two more judge models. I also built a log-analysis tool that shows where a run’s time goes, checks byte for byte that speed changes leave the prompts unchanged, and traced 51 timed-out requests per run to a concurrency default.</p>
+          </div>
+          <dl class="readouts">
+            <div><dt>~20% → 49%</dt><dd>headline divergence, inflated by empty answers the judge still graded</dd></div>
+          </dl>
+        </div>
+        <p class="stack">Inspect · Python · Ollama · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/137">Scorer fix</a> · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/119">Speed test</a></p>
+      </div>
+    </article>
   </section>
 
   <!-- EXPERIENCE -->
@@ -94,9 +136,9 @@
     <div class="jobs">
       <div class="job">
         <div class="row job-head" data-mark>
-          <div class="margin"><p class="date"><span>Jul 2025 –</span> <span>Oct 2026</span></p></div>
+          <div class="margin"><p class="date"><span>Jul 2025 –</span> <span>Present</span></p></div>
           <div class="body">
-            <h3>AI Engineer, Agents &amp; LLM Infrastructure <span class="at">IgniteTech, via Crossover · remote</span></h3>
+            <h3>Senior AI Engineer, Agents &amp; LLM Infrastructure <span class="at">IgniteTech, via Crossover · remote</span></h3>
             <p>I built agent infrastructure and LLM systems for a unified customer-care and social-media platform.</p>
             <p>That included the distributed multi-agent platform my team used for software development, running up to 500 long-running coding agents (LangGraph on Ray, Kafka, Redis, PostgreSQL, Qdrant and sandboxed tools, on Kubernetes on AWS), and its observability layer: Langfuse tracing of full agent trajectories, with run data in ClickHouse for cost analysis, failure diagnosis and behavioural evaluation. The social engine below was built with it.</p>
           </div>
@@ -305,6 +347,7 @@
       <div class="margin"><p class="label">Projects</p></div>
       <div class="body"><h2 id="projects-h" class="section-title">Personal projects.</h2></div>
     </div>
+
 
     <article class="row case" data-mark>
       <div class="margin">
