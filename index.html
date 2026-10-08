@@ -245,10 +245,9 @@
         <div class="body">
           <h3>Multi-camera tracking and re-identification</h3>
           <div class="split">
-            <p>The pipeline runs YOLOv8/v11 segmentation, computes 512-d ReID embeddings from segmented person pixels only, then associates people across cameras. This cut identity switches by 20% compared with the full-bounding-box baseline. I took it to production: PyTorch to ONNX to TensorRT, the Triton configuration, a custom Triton ReID backend with a re-tuned matching threshold, and fixes for the shape-mismatch and runner-registration failures in the deployed stack. GPU-accelerated RTSP decoding raised throughput 10–15× over naive full-resolution decoding.</p>
+            <p>The pipeline runs YOLOv8/v11 segmentation, computes 512-d ReID embeddings from segmented person pixels only, then associates people across cameras. This cut identity switches by 20% compared with the full-bounding-box baseline. I took it to production: PyTorch to ONNX to TensorRT, the Triton configuration, a custom Triton ReID backend with a re-tuned matching threshold, and fixes for the shape-mismatch and runner-registration failures in the deployed stack. I also moved RTSP decoding onto the GPU.</p>
             <dl class="readouts">
               <div><dt>−20%</dt><dd>identity switches</dd></div>
-              <div><dt>10–15×</dt><dd>pipeline throughput</dd></div>
             </dl>
           </div>
           <p class="stack">YOLOv8/v11 · ONNX · TensorRT · Triton Inference Server</p>
@@ -315,7 +314,7 @@
           <div class="margin"><p class="date"><span>Nov 2022 –</span> <span>Nov 2023</span></p></div>
           <div class="body">
             <h3>Research Engineer <span class="at">KICS, Center for Language Engineering, UET Lahore</span></h3>
-            <p>I developed a distributed OCR pipeline for large archives of historical documents, reaching 98% accuracy with custom transformer models and automated quality control, and a containerised deployment with automated failover that processed 1M+ pages a day at 99.9% uptime.</p>
+            <p>I developed a distributed OCR pipeline for large archives of historical documents, with custom transformer models, automated quality control and a containerised deployment with automated failover.</p>
             <p>I also read primary literature on retrieval-augmented generation and text encoding and reproduced methods from it, built Tajziyakar, a containerised OCR and segmentation pipeline that extracts and flags TV news ticker content at archive scale, and built tools for rapid prototyping of ML models, with automated experiment tracking and distributed training, so researchers could test hypotheses about 5× faster.</p>
           </div>
         </div>
@@ -451,7 +450,7 @@
 
         <h3 class="small-h small-h--gap">Toolkit</h3>
         <dl class="toolkit">
-          <div><dt>Core</dt><dd>Python, PyTorch, NumPy, TypeScript, C++, SQL, FastAPI, Pydantic</dd></div>
+          <div><dt>Core</dt><dd>Python, PyTorch, NumPy, TypeScript, Node.js, React, C++, SQL, FastAPI, Pydantic</dd></div>
           <div><dt>Training &amp; evaluation</dt><dd>Few-shot and metric learning, prototypical networks, episodic eval harnesses, leakage-aware split design, anomaly detection, MLflow</dd></div>
           <div><dt>LLM inference &amp; agents</dt><dd>vLLM, Hugging Face, Anthropic API, open-weight model serving, RAG, LangGraph, LangChain, Ray, MCP, Langfuse, Claude Code, Codex, Cursor</dd></div>
           <div><dt>GPUs &amp; deployment</dt><dd>CUDA, mixed precision, ONNX, TensorRT, Triton Inference Server, Jetson, Docker, Kubernetes, AWS, GitHub Actions, CI/CD</dd></div>
