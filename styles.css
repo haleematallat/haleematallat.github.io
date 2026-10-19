@@ -398,3 +398,7 @@ body.community .top { background: color-mix(in srgb, var(--paper) 92%, transpare
 .gallery-cta { position: absolute; left: 12px; bottom: 12px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 999px;
   background: var(--paper); color: var(--signal-ink); font-family: var(--sans); font-size: 13px; }
 .gallery:hover .gallery-cta, .gallery:focus-visible .gallery-cta { border-color: var(--signal); color: var(--ink); }
+
+.cert { margin-top: 26px; max-width: 420px; }
+.cert img { display: block; width: 100%; border: 1px solid var(--rule); border-radius: 6px; }
+.cert figcaption { margin-top: 10px; font-family: var(--sans); font-size: 14px; color: var(--graphite); }
