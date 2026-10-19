@@ -6,7 +6,7 @@
   var themeBtn = document.querySelector('.theme');
   var themeLabel = document.querySelector('[data-theme-label]');
   var mq = window.matchMedia('(prefers-color-scheme: dark)');
-  function current() { return root.dataset.theme || (mq.matches ? 'dark' : 'light'); }
+  function current() { return root.dataset.theme || 'light'; }
   function syncLabel() { themeLabel.textContent = current() === 'dark' ? 'Light' : 'Dark'; }
   syncLabel();
   mq.addEventListener && mq.addEventListener('change', syncLabel);
