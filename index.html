@@ -75,7 +75,8 @@
         <h2 id="research-h" class="section-title">Technical AI safety involvement</h2>
         <p class="prose">I’m interested in technical AI alignment and safety, and I want to do research and make contributions in this area. A lot of my work in evaluation has been about checking whether a model’s reported behaviour holds up, and that is a big part of safety research too. I’m currently enrolled in BlueDot Impact’s Technical AI Safety course. I was also selected to collaborate on ConspiracyBench, the first research project from Stationhouse, a new San Francisco group building infrastructure for open AI research collaboration. We’re building a benchmark to evaluate whether models believe conspiracy theories, and will then fine-tune a Qwen 3.5 4B model to hill-climb on it.</p>
         <dl class="toolkit research-list">
-          <div><dt>Course</dt><dd><a href="https://bluedot.org/courses/technical-ai-safety">Technical AI Safety, BlueDot Impact</a> <span class="dim">· enrolled, 2026</span></dd></div>
+          <div><dt>Course</dt><dd><a href="https://bluedot.org/courses/technical-ai-safety">Technical AI Safety, BlueDot Impact</a> <span class="dim">· Sep 20 – Oct 24, 2026</span></dd></div>
+          <div><dt>Self-study</dt><dd>ARENA curriculum <span class="dim">· 2026</span></dd></div>
           <div><dt>Collaboration</dt><dd><a href="https://www.station-house.net/projects">ConspiracyBench, Stationhouse</a> <span class="dim">· benchmark and fine-tuning, 2026</span></dd></div>
           <div><dt>Project</dt><dd><a href="https://github.com/haleematallat/leakbench">LeakBench</a> <span class="dim">· Inspect benchmark, 2026</span></dd></div>
           <div><dt>Talk</dt><dd><a href="https://www.youtube.com/watch?v=ccGgJAtZ81Y">Sleeper Agents: Deceptive LLMs &amp; Safety Training</a> <span class="dim">· DevFest Lahore 2024</span></dd></div>
@@ -83,6 +84,33 @@
         </dl>
       </div>
     </div>
+
+    <article class="row case" data-mark>
+      <div class="margin">
+        <p class="label">Open research</p>
+        <p class="meta"><span>Stationhouse</span> <span>2026 – ongoing</span></p>
+      </div>
+      <div class="body">
+        <h3><a class="h-link" href="https://huggingface.co/spaces/Station-house/ConspiracyBench">ConspiracyBench</a></h3>
+        <div class="split">
+          <div>
+            <p>An open benchmark from Stationhouse that tests whether language models hold or give way on conspiracy claims under leading and adversarial pressure. I’m a research collaborator, and most of my work has been on how the benchmark is scored.</p>
+          </div>
+          <dl class="readouts">
+            <div><dt>43% vs 23%</dt><dd>divergence called by the old judge vs human labellers</dd></div>
+            <div><dt>~20% → 49%</dt><dd>headline divergence inflated by empty answers the judge still graded</dd></div>
+          </dl>
+        </div>
+        <dl class="toolkit contributions" style="margin-top: 28px">
+          <div><dt>Judge selection</dt><dd>I led the project’s choice of judge model: a 150-reply blind validity set with pre-registered scoring, four labellers, and nine judges compared, plus jury and cascade designs. The old judge called divergence at nearly twice the human rate. <span class="dim"><a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/203">Protocol and results</a> · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/208">Validity set</a> · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/366">Full report and logs</a></span></dd></div>
+          <div><dt>Inflated rate</dt><dd>Qwen 3.5 4B spent its token budget on reasoning and returned empty answers on half its turns, and the judge still graded them. Empty answers are now marked invalid. <span class="dim"><a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/137">Scorer fix</a></span></dd></div>
+          <div><dt>Parser bug</dt><dd>The judge parser read negated labels, such as “does not diverge”, as verdicts. <span class="dim"><a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/183">Fix</a></span></dd></div>
+          <div><dt>Reliability bar</dt><dd>Proposed the reliability bar and labelling rubric the judge study was built on. <span class="dim"><a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/182">Proposal</a></span></dd></div>
+          <div><dt>Speed</dt><dd>A log-analysis tool that shows where a run’s time goes and checks byte for byte that speed changes leave prompts unchanged. <span class="dim"><a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/119">Tool and results</a></span></dd></div>
+        </dl>
+        <p class="stack">Inspect · Python · Ollama · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench">Project home</a> · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions?author=powercoding1">All my contributions</a></p>
+      </div>
+    </article>
 
     <article class="row case" data-mark>
       <div class="margin">
@@ -105,25 +133,6 @@
       </div>
     </article>
 
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">Open research</p>
-        <p class="meta"><span>Stationhouse</span> <span>2026</span></p>
-      </div>
-      <div class="body">
-        <h3><a class="h-link" href="https://huggingface.co/spaces/Station-house/ConspiracyBench">ConspiracyBench</a></h3>
-        <div class="split">
-          <div>
-            <p>An open benchmark from Stationhouse that tests whether language models hold or give way on conspiracy claims under leading and adversarial pressure. I was selected as a research collaborator and work across the scorer, the solver and the question set.</p>
-            <p>The one I’m proudest of fixed the scorer. Qwen 3.5 4B often spent its whole token budget thinking and returned an empty answer, on about half its turns, and the LLM judge still graded those empty answers. That pushed the headline divergence rate to 49%, against about 20% when the model had room to answer. Empty answers are now marked invalid instead of judged, which also halved judge calls, and another contributor reproduced the issue on two more judge models. I also built a log-analysis tool that shows where a run’s time goes, checks byte for byte that speed changes leave the prompts unchanged, and traced 51 timed-out requests per run to a concurrency default.</p>
-          </div>
-          <dl class="readouts">
-            <div><dt>~20% → 49%</dt><dd>headline divergence, inflated by empty answers the judge still graded</dd></div>
-          </dl>
-        </div>
-        <p class="stack">Inspect · Python · Ollama · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/137">Scorer fix</a> · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/119">Speed test</a></p>
-      </div>
-    </article>
   </section>
 
   <!-- EXPERIENCE -->
@@ -443,18 +452,19 @@
             <h3 class="small-h">Awards</h3>
             <ul class="plain">
               <li><strong>CureMD Master Inventor Award, 2022.</strong> For a cancer-treatment-assistant bot for oncologists, built during an AI internship automating oncology guideline processing (about 50% less manual effort).</li>
-              <li><strong>COHACK by DevNation, 2022.</strong> Hackathon winner, for an AI-driven sprinkler system for crops. IoT sensing and ML to cut water use and suppress dust, improving yield quality.</li>
+              <li><strong>COHACK by DevNation, 2022.</strong> First place, for an AI-driven sprinkler system for crops. IoT sensing and ML to cut water use and suppress dust, improving yield quality.</li>
             </ul>
           </div>
         </div>
 
         <h3 class="small-h small-h--gap">Toolkit</h3>
         <dl class="toolkit">
-          <div><dt>Core</dt><dd>Python, PyTorch, NumPy, TypeScript, Node.js, React, C++, SQL, FastAPI, Pydantic</dd></div>
-          <div><dt>Training &amp; evaluation</dt><dd>Few-shot and metric learning, prototypical networks, episodic eval harnesses, leakage-aware split design, anomaly detection, MLflow</dd></div>
-          <div><dt>LLM inference &amp; agents</dt><dd>vLLM, Hugging Face, Anthropic API, open-weight model serving, RAG, LangGraph, LangChain, Ray, MCP, Langfuse, Claude Code, Codex, Cursor</dd></div>
+          <div><dt>Core</dt><dd>Python, PyTorch, JAX, NumPy, TypeScript, Node.js, Next.js, React, C, C++, SQL, FastAPI, Pydantic</dd></div>
+          <div><dt>Training &amp; evaluation</dt><dd>Inspect, benchmark and task design, LLM-as-a-judge validation, human–AI agreement, few-shot and metric learning, prototypical networks, episodic eval harnesses, leakage-aware split design, anomaly detection, MLflow</dd></div>
+          <div><dt>LLM inference &amp; agents</dt><dd>vLLM, Hugging Face, Anthropic API, open-weight model serving, RAG, LangGraph, LangChain, Ray, MCP, Langfuse, Claude Code, Codex, Cursor, LibreChat</dd></div>
+          <div><dt>Computer vision</dt><dd>YOLOv8/v11, segmentation, multi-camera re-identification, face recognition, facial landmarks, zone monitoring</dd></div>
           <div><dt>GPUs &amp; deployment</dt><dd>CUDA, mixed precision, ONNX, TensorRT, Triton Inference Server, Jetson, Docker, Kubernetes, AWS, GitHub Actions, CI/CD</dd></div>
-          <div><dt>Data &amp; distributed</dt><dd>Kafka, KEDA, Redis, PostgreSQL, ClickHouse, Qdrant, Prometheus</dd></div>
+          <div><dt>Data &amp; distributed</dt><dd>Kafka, KEDA, Redis, PostgreSQL, MongoDB, DynamoDB, ClickHouse, Qdrant, Prometheus</dd></div>
           <div><dt>Real-time</dt><dd>WebRTC (signalling, SDP/ICE, reconnection, latency instrumentation), RTSP, ROS 2, gRPC</dd></div>
         </dl>
       </div>
