@@ -23,14 +23,14 @@
     var acc = inst.querySelector('[data-acc]');
     var cap = inst.querySelector('[data-caption]');
     var captions = {
-      reported: 'Validation accuracy under the original harness',
-      corrected: 'Validation accuracy under the corrected 11-way protocol'
+      reported: 'Initial experiment: ~110 images, 14 classes, 3-way 1-shot',
+      corrected: 'Later validation: 1,142 images, 11 classes, 11-way'
     };
     var values = { reported: 46.7, corrected: 89.7 };
     var announce = inst.querySelector('[data-announce]');
     var shown = 46.7, raf;
     function settle(p) {
-      if (announce) announce.textContent = values[p].toFixed(1) + '% validation accuracy, ' + captions[p].toLowerCase().replace('validation accuracy ', '');
+      if (announce) announce.textContent = values[p].toFixed(1) + '% validation accuracy. ' + captions[p];
     }
     inst.querySelectorAll('[data-set]').forEach(function (b) {
       b.addEventListener('click', function () {

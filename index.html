@@ -234,20 +234,20 @@
           <p class="label">Evaluation</p>
         </div>
         <div class="body">
-          <h3>Fixing the evaluation of a few-shot barcode classifier</h3>
-          <p>I fine-tuned a ResNet-12 prototypical-network classifier on damaged and glared barcode images, then found the reported numbers were an artefact of the harness. There was split leakage, a 1-shot vs 3–40-shot support mismatch, and a 3-way vs 11-way evaluation mismatch. I rebuilt the held-out split and the episode sampler. Under the corrected 11-way protocol the model reached 89.7% validation accuracy, against the 46.7% that had been reported.</p>
+          <h3>Fixing the evaluation of a few-shot product classifier</h3>
+          <p>I fine-tuned a ResNet-12 prototypical-network classifier to identify product cartons when barcode recognition failed. During evaluation, I found overlapping training and validation images, a 1-shot vs 3–40-shot support mismatch, and a 3-way vs 11-way evaluation mismatch. I rebuilt the held-out split and episode sampler to match deployment conditions. A later experiment achieved 89.7% validation accuracy on an 11-way task. The initial experiment reported 46.7% on a smaller dataset with a different evaluation setup, so the results aren’t directly comparable.</p>
 
           <figure class="instrument" data-protocol="reported">
             <div class="instrument-head">
-              <span class="label">Evaluation protocol</span>
-              <div class="switch" role="group" aria-label="Evaluation protocol">
-                <button type="button" data-set="reported" aria-pressed="true">Original</button>
-                <button type="button" data-set="corrected" aria-pressed="false">Corrected</button>
+              <span class="label">Two experiments</span>
+              <div class="switch" role="group" aria-label="Choose experiment">
+                <button type="button" data-set="reported" aria-pressed="true">Initial experiment</button>
+                <button type="button" data-set="corrected" aria-pressed="false">Later validation</button>
               </div>
             </div>
             <div class="gauge">
               <p class="gauge-value"><span data-acc>46.7</span><small>%</small></p>
-              <p class="gauge-caption" data-caption>Validation accuracy under the original harness</p>
+              <p class="gauge-caption" data-caption>Initial experiment: ~110 images, 14 classes, 3-way 1-shot</p>
               <p class="visually-hidden" data-announce aria-live="polite"></p>
               <div class="scale" aria-hidden="true">
                 <div class="scale-fill"></div>
@@ -255,11 +255,12 @@
               </div>
             </div>
             <dl class="checks">
+              <div><dt>Dataset</dt><dd><span class="r n">~110 images, 14 classes</span><span class="c n">1,142 images, 11 classes</span></dd></div>
               <div><dt>Train / validation split</dt><dd><span class="r">Leakage between splits</span><span class="c">Held-out split rebuilt</span></dd></div>
-              <div><dt>Support set</dt><dd><span class="r">1-shot vs 3–40-shot</span><span class="c">Consistent support size</span></dd></div>
+              <div><dt>Support set</dt><dd><span class="r">1-shot vs 3–40-shot</span><span class="c">Deployment-matched support setup</span></dd></div>
               <div><dt>Episodes</dt><dd><span class="r">3-way</span><span class="c">11-way</span></dd></div>
             </dl>
-            <figcaption class="dim">Same model and data, evaluated two ways.</figcaption>
+            <figcaption class="dim">Results from two experimental configurations with different datasets and evaluation protocols; accuracies are not directly comparable.</figcaption>
           </figure>
           <p class="stack">PyTorch · ResNet-12 · prototypical networks · episodic evaluation</p>
         </div>
