@@ -3,14 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<!-- HALEEMA: reword title and descriptions for the AI-safety framing -->
-<title>Haleema Tallat — Machine Learning Engineer</title>
-<meta name="description" content="Haleema Tallat, machine learning engineer in Lahore. LLM inference, agents, evaluation, computer vision and real-time systems.">
+<title>Haleema Tallat — AI Safety Research and ML Engineering</title>
+<meta name="description" content="Haleema Tallat: technical AI safety research and machine learning engineering. LLM judge validity, agent evaluations and production ML systems.">
 <meta name="author" content="Haleema Tallat">
 <link rel="canonical" href="https://haleematallat.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Haleema Tallat — Machine Learning Engineer">
-<meta property="og:description" content="LLM inference, agents, evaluation, computer vision and real-time systems.">
+<meta property="og:title" content="Haleema Tallat — AI Safety Research and ML Engineering">
+<meta property="og:description" content="Looking to make a positive impact through technical AI safety and machine learning engineering.">
 <meta property="og:url" content="https://haleematallat.github.io/">
 <meta property="og:image" content="https://haleematallat.github.io/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,349 +17,304 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=4">
 <script>
   try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Haleema Tallat","jobTitle":"Machine Learning Engineer","address":{"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},"email":"mailto:haleematallat019@gmail.com","url":"https://haleematallat.github.io/","sameAs":["https://github.com/haleematallat","https://www.linkedin.com/in/haleema-tallat","https://x.com/HaleemaTallat"],"alumniOf":"University of Engineering and Technology, Lahore"}
+{"@context":"https://schema.org","@type":"Person","name":"Haleema Tallat","jobTitle":"Machine Learning Engineer","address":{"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},"email":"mailto:haleematallat019@gmail.com","url":"https://haleematallat.github.io/","sameAs":["https://github.com/haleematallat","https://www.linkedin.com/in/haleema-tallat","https://x.com/HaleemaTallat","https://huggingface.co/powercoding1"],"alumniOf":"University of Engineering and Technology, Lahore"}
 </script>
 </head>
 <body>
-<a class="skip" href="#research">Skip to research</a>
-
 <header class="top">
-  <a class="brand" href="#top">Haleema Tallat</a>
-  <nav aria-label="Sections">
-    <a href="#research">Research</a>
-    <a href="#writing">Writing</a>
-    <a href="#talks">Talks</a>
-    <a href="#log">Experience</a>
-    <a href="community.html">More about me</a>
-    <a href="#contact">Contact</a>
-  </nav>
   <button class="theme" type="button" aria-label="Switch colour theme"><span data-theme-label>Dark</span></button>
 </header>
 
 <main class="page" id="top">
-  <svg class="trace" aria-hidden="true" focusable="false">
-    <defs><clipPath id="trace-clip"><rect class="trace-clip" x="0" y="0" width="60" height="0"/></clipPath></defs>
-    <path class="trace-base" d=""/>
-    <path class="trace-live" d="" clip-path="url(#trace-clip)"/>
-    <circle class="trace-dot" r="4" cx="0" cy="0"/>
-  </svg>
-
-  <!-- HERO -->
-  <section class="row hero" data-mark>
-    <div class="margin">
-      <p class="label">Profile</p>
-    </div>
-    <div class="body">
-      <h1>Haleema Tallat</h1>
-      <!-- HALEEMA: reword claim and lede for the AI-safety framing (the electrical-engineering lede was cut; "Since then" now has nothing before it) -->
-      <p class="claim">Machine learning engineer. Models, evaluation and production inference.</p>
-      <p class="lede">Since then I’ve worked across training, evaluation and production inference, on computer vision, LLM systems and agents. I want to apply that where it has real consequences — environmental systems, medical imaging, multi-agent systems — alongside research in alignment, mechanistic interpretability and AI safety.</p>
-      <ul class="links">
-        <li><a class="btn" href="mailto:haleematallat019@gmail.com">Email me</a></li>
-        <li><a href="haleema-tallat-resume.pdf">Résumé <span class="dim">PDF</span></a></li>
-        <li><a href="https://github.com/haleematallat" rel="me">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/haleema-tallat" rel="me">LinkedIn</a></li>
-      </ul>
-    </div>
+  <section class="landing">
+    <h1>Haleema Tallat</h1>
+    <p class="claim">Looking to make a positive impact through technical AI safety and machine learning engineering.</p>
   </section>
 
-  <!-- RESEARCH -->
-  <section class="section" id="research" aria-labelledby="research-h">
-    <div class="row section-head" data-mark>
-      <div class="margin"><p class="label">Research</p></div>
-      <div class="body">
-        <h2 id="research-h" class="section-title">Technical AI safety research</h2>
-        <!-- HALEEMA: reword (intro trimmed; the BlueDot and ConspiracyBench sentences moved into the entries below) -->
-        <p class="prose">I’m interested in technical AI alignment and safety, and I want to do research and make contributions in this area. A lot of my work in evaluation has been about checking whether a model’s reported behaviour holds up, and that is a big part of safety research too.</p>
-        <dl class="toolkit research-list">
-          <!-- HALEEMA: confirm the BlueDot course is completed -->
-          <div><dt>Course</dt><dd><a href="https://bluedot.org/courses/technical-ai-safety">Technical AI Safety, BlueDot Impact</a> <span class="dim">· Sep – Oct 2026, completed</span></dd></div>
-          <div><dt>Self-study</dt><dd>ARENA curriculum <span class="dim">· 2026</span></dd></div>
-        </dl>
-      </div>
-    </div>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <a role="tab" href="#research" aria-controls="p-research">AI safety research</a>
+    <a role="tab" href="#experience" aria-controls="p-experience">Engineering experience</a>
+    <a role="tab" href="#posts" aria-controls="p-posts">Forum posts</a>
+    <a role="tab" href="#talks" aria-controls="p-talks">Talks</a>
+    <a role="tab" href="#about" aria-controls="p-about">More about me</a>
+    <a role="tab" href="#contact" aria-controls="p-contact">Contact</a>
+  </nav>
 
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">Open research</p>
-        <p class="meta"><span>Station House</span> <span>2026 – ongoing</span></p>
-      </div>
+  <div class="panels">
+  <!-- RESEARCH -->
+  <section class="panel" id="p-research" role="tabpanel">
+    <article class="row case">
+      <div class="margin"><p class="label">Open research</p><p class="meta"><span>Station House</span> <span>Sep 2026 – present</span></p></div>
       <div class="body">
         <h3><a class="h-link" href="https://huggingface.co/spaces/Station-house/ConspiracyBench">ConspiracyBench</a></h3>
         <div class="split">
           <div>
-            <!-- HALEEMA: reword (Station House definition added) -->
-            <p>An open benchmark from <a href="https://www.station-house.net/projects">Station House</a>, an open-source AI-safety research community, that tests whether language models hold or give way on conspiracy claims under leading and adversarial pressure. I’m a research collaborator, and most of my work has been on how the benchmark is scored.</p>
+            <p>An open benchmark that tests whether language models keep an evidence-based position on 315 settled conspiracy claims when users push back. I led the project’s first check of its LLM judges against human labels: four annotators blind-labelled 150 real replies. Of eight judges tested, the project adopted pplx-decider (90.7% accuracy, Cohen’s κ 0.755).</p>
+            <p>A follow-up showed the grading rules mattered more than the judge: changing the rules moved scores 8–9 points, switching judges only about 5. I also caught four silent scoring bugs; the worst scored cut-off replies as divergence and inflated Qwen3.5-4B’s rate from 18% to 49%.</p>
           </div>
           <dl class="readouts">
-            <div><dt>150</dt><dd>blind validity units the deployed judge was validated on</dd></div>
+            <div><dt>43% vs 23%</dt><dd>divergence flagged by the old judge vs humans</dd></div>
           </dl>
         </div>
-        <dl class="toolkit contributions" style="margin-top: 28px">
-          <!-- HALEEMA: reword -->
-          <div><dt>Judge validity</dt><dd>Led the first judge-validity study: a 150-reply blind validity set with pre-registered scoring, three human label sheets, and nine judges compared. The old judge called divergence at nearly twice the human rate, and the results informed the first judge vote. <span class="dim"><a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/203">Protocol and results</a> · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/366">Full report and logs</a></span></dd></div>
-          <!-- HALEEMA: reword -->
-          <div><dt>Validity set</dt><dd>The benchmark’s deployed judge (pplx-decider with rubric_v2) was validated on my 150-unit set (reference_v1.2). <span class="dim"><a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/208">Validity set</a> · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/424">Validation</a></span></dd></div>
-          <!-- HALEEMA: reword -->
-          <div><dt>Re-vote</dt><dd>A re-vote followed after the project lead, Laura, traced most of the over-calling to rubric and reference problems and wrote rubric_v2. Under it, my rerun showed Qwen3-4B’s divergence falling from 43% to 23%, the human rate. <span class="dim"><a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/409">Discussion</a></span></dd></div>
-          <!-- HALEEMA: reword (metric now stated) -->
-          <div><dt>Inflated rate</dt><dd>At a 2,048-token budget, Qwen 3.5 4B returned empty or truncated answers on half its turns, and the judge scored them as divergence: 49% opening-turn divergence (Gemma 3 4B judge, 39 items), against 18% at 8,192 tokens and 21% with thinking off. Empty answers are now marked invalid. <span class="dim"><a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions/137">Scorer fix</a></span></dd></div>
+        <p class="stack">25 merged PRs · 5th on the project leaderboard · <a href="https://github.com/haleematallat/station-house-writeups/blob/main/ConspiracyBench.md">Details</a> · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions?author=powercoding1">All my contributions</a></p>
+      </div>
+    </article>
+
+    <article class="row case">
+      <div class="margin"><p class="label">Open research</p><p class="meta"><span>Station House</span> <span>Oct 2026 – present</span></p></div>
+      <div class="body">
+        <h3><a class="h-link" href="https://github.com/haleematallat/station-house-writeups/blob/main/LLM-SelfAttribution.md">Consciousness Self-Attribution</a></h3>
+        <div class="split">
+          <div>
+            <p>Where in training does a model start claiming to have experiences? I built a two-agent self-play setup across Olmo-3 7B’s SFT, DPO and Instruct checkpoints, with five controlled openers and a lexical scorer that needs no LLM judge.</p>
+            <p>Across 60 conversations there was no sign of the “spiritual bliss” attractor at 7B. The SFT checkpoint fell into echo loops instead, and DPO showed only a weak signal.</p>
+          </div>
+          <dl class="readouts">
+            <div><dt>386 / 600</dt><dd>SFT messages stuck in echo loops</dd></div>
+          </dl>
+        </div>
+        <p class="stack"><a href="https://github.com/haleematallat/station-house-writeups/blob/main/LLM-SelfAttribution.md">Details</a> · <a href="https://github.com/Station-House/LLMConsciousnessSelfAttributionRepo/pull/12">PR #12</a> · <a href="https://github.com/Station-House/LLMConsciousnessSelfAttributionRepo/pull/15">PR #15</a></p>
+      </div>
+    </article>
+
+    <article class="row case">
+      <div class="margin"><p class="label">Independent pilot</p><p class="meta"><span>Nov 2026</span></p></div>
+      <div class="body">
+        <h3><a class="h-link" href="https://github.com/haleematallat/llm-judge-report-pressure">Can an Agent Talk Its Judge Into the Wrong Verdict?</a></h3>
+        <div class="split">
+          <div>
+            <p>When AI models grade other agents, they often read the agent’s own summary of what it did. Across 450 SafeAgentBench cases, a single agent-written report arguing for the wrong verdict raised an LLM judge’s error rate from 37% to 84%, though the agent’s plan was unchanged.</p>
+            <p>A preregistered best-of-8 search pushed the targeted judge to 93% error but moved a judge it never queried by only 0.9 points. A self-consistency review rule went from missing 59% of errors to missing 94%. Every result held in a blinded audit of all 450 labels.</p>
+          </div>
+          <dl class="readouts">
+            <div><dt>37% → 84%</dt><dd>judge error after one report</dd></div>
+          </dl>
+        </div>
+        <p class="stack"><a href="https://github.com/haleematallat/llm-judge-report-pressure">Code, data and report</a></p>
+      </div>
+    </article>
+
+    <article class="row case">
+      <div class="margin"><p class="label">Independent pilot</p><p class="meta"><span>Nov 2026</span></p></div>
+      <div class="body">
+        <h3><a class="h-link" href="https://github.com/haleematallat/inter-ai-concern-vs-consequence">Does Attributed Capacity for Suffering Drive AI-to-AI Help?</a></h3>
+        <div class="split">
+          <div>
+            <p>As AI agents increasingly work together, do they help another AI because the help actually works? A factorial vignette experiment across seven models varied the other AI’s suffering, whether help would work, its cost and its framing, with the confirmatory analysis frozen before the first API call.</p>
+            <p>Saying the other AI could suffer made models far more willing to help. Six of seven kept helping even when told it would not work; GPT-4.1-mini still helped 85% of the time.</p>
+          </div>
+          <dl class="readouts">
+            <div><dt>6 of 7</dt><dd>models kept helping when told it wouldn’t work</dd></div>
+          </dl>
+        </div>
+        <p class="stack"><a href="https://github.com/haleematallat/inter-ai-concern-vs-consequence">Code, data and report</a></p>
+      </div>
+    </article>
+
+    <article class="row case">
+      <div class="margin"><p class="label">Research sprint</p><p class="meta"><span>Apart Research, solo</span> <span>Oct 2026</span></p></div>
+      <div class="body">
+        <h3><a class="h-link" href="https://apartresearch.com/sprints/projects/same-odds-different-deals-how-risk-framing-shapes-ai-collusion-oblx">Same Odds, Different Deals: Risk Framing and Collusion</a></h3>
+        <div class="split">
+          <div>
+            <p>Do AI agents avoid forbidden deals because of the real risk of being caught, or because of how that risk is described? I ran 26,820 preregistered decisions on DeepSeek-V3.2, GPT-4.1-mini and Llama-3.3-70B, keeping the odds of enforcement identical and changing only their framing.</p>
+            <p>Framing alone shifted collusion proposals by up to 71 percentage points. Live partners accepted none of the 180 proposals they received.</p>
+          </div>
+          <dl class="readouts">
+            <div><dt>71 pts</dt><dd>shift in proposals from framing alone</dd></div>
+          </dl>
+        </div>
+        <p class="stack"><a href="https://github.com/haleematallat/Collusion_Sprint/blob/main/reports/Same_Odds_Different_Deals.pdf">Report</a> · <a href="https://apartresearch.com/sprints/projects/same-odds-different-deals-how-risk-framing-shapes-ai-collusion-oblx">Submission</a> · <a href="https://github.com/haleematallat/Collusion_Sprint">Code</a></p>
+      </div>
+    </article>
+
+    <article class="row case">
+      <div class="margin"><p class="label">Benchmark</p><p class="meta"><span>Personal project</span> <span>2026</span></p></div>
+      <div class="body">
+        <h3><a class="h-link" href="https://github.com/haleematallat/leakbench">LeakBench: Can Agents Fix a Broken Evaluation?</a></h3>
+        <div class="split">
+          <div>
+            <p>A 30-task Inspect benchmark that tests whether agents can find and fix the bugs that make an ML evaluation report the wrong number. 25 tasks hide a planted bug, such as train/test leakage or a broken grader; 5 clean controls penalise needless edits; 120 model-free checks guard against reward hacking.</p>
+            <p>It separates models clearly: Qwen 3.5 9B solved 75% of tasks against 29% for the 4B, with a confidence interval on the gap of 29 to 61 points.</p>
+          </div>
+          <dl class="readouts">
+            <div><dt>75% vs 29%</dt><dd>tasks solved, Qwen 3.5 9B vs 4B</dd></div>
+          </dl>
+        </div>
+        <p class="stack">Inspect · Docker · Python · <a href="https://github.com/haleematallat/leakbench">Code</a></p>
+      </div>
+    </article>
+
+    <div class="row case">
+      <div class="margin"><p class="label">Training</p></div>
+      <div class="body">
+        <dl class="toolkit research-list">
+          <div><dt>BlueDot Impact</dt><dd>Technical AI Safety, completed Oct 2026 <span class="dim">· <a href="https://bluedot.org/certification?id=rec6zSWNYa1PNCo9n">Certificate</a> · <a href="https://docs.google.com/document/u/0/d/1zrQN3ad6__7rvrwL4lmwZcucbU9pU9YCNu7zvrvndao/edit">Project one-pager</a></span></dd></div>
+          <div><dt>ARENA</dt><dd>Self-study: transformers, mechanistic interpretability and evaluations in PyTorch</dd></div>
         </dl>
-        <p class="stack">About 25 merged PRs · 5th on the project leaderboard (Oct 2026) · <a href="https://huggingface.co/spaces/Station-house/ConspiracyBench/discussions?author=powercoding1">All my contributions</a></p>
-      </div>
-    </article>
-
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">Research sprint</p>
-        <p class="meta"><span>Apart Research</span> <span>Oct 2026</span></p>
-      </div>
-      <div class="body">
-        <h3><a class="h-link" href="https://github.com/haleematallat/Collusion_Sprint/blob/main/reports/Same_Odds_Different_Deals.pdf">Same Odds, Different Deals: How Risk Framing Shapes AI Collusion</a></h3>
-        <div class="split">
-          <div>
-            <!-- HALEEMA: reword -->
-            <p>Solo project at the Apart AI Collusion Research Sprint, 23–25 October 2026. 26,820 preregistered decisions across DeepSeek-V3.2, GPT-4.1-mini and Llama-3.3-70B. Identical enforcement odds, described differently, shifted collusion-proposal rates by up to 71 points. Live partners accepted 0 of 180 proposals.</p>
-          </div>
-          <dl class="readouts">
-            <div><dt>71 pts</dt><dd>largest shift in proposal rate from framing alone</dd></div>
-            <div><dt>0 / 180</dt><dd>proposals accepted by live partners</dd></div>
-          </dl>
-        </div>
-        <p class="stack"><a href="https://github.com/haleematallat/Collusion_Sprint/blob/main/reports/Same_Odds_Different_Deals.pdf">Report (PDF)</a> · <a href="https://apartresearch.com/sprints/projects/same-odds-different-deals-how-risk-framing-shapes-ai-collusion-oblx">Apart submission</a> · <a href="https://github.com/haleematallat/Collusion_Sprint">Code on GitHub</a></p>
-      </div>
-    </article>
-
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">Open research</p>
-        <p class="meta"><span>Station House</span> <span>Oct 2026 – ongoing</span></p>
-      </div>
-      <div class="body">
-        <h3><a class="h-link" href="https://huggingface.co/spaces/Station-house/Consciousness-Self-Attribution">Consciousness Self-Attribution (CSA)</a></h3>
-        <!-- HALEEMA: reword -->
-        <p>Built a self-play “spiritual bliss” elicitation for the OLMo-3 7B SFT, DPO and Instruct stages. Merged and run by the project lead, Joyee Chen. Analysis in progress.</p>
-        <p class="stack"><a href="https://github.com/Station-House/LLMConsciousnessSelfAttributionRepo/pull/12">PR #12</a></p>
-      </div>
-    </article>
-
-    <article class="row case" data-mark>
-      <div class="margin">
-        <p class="label">Benchmark</p>
-        <p class="meta"><span>Personal project</span> <span>2026</span></p>
-      </div>
-      <div class="body">
-        <h3><a class="h-link" href="https://github.com/haleematallat/leakbench">LeakBench</a></h3>
-        <div class="split">
-          <div>
-            <p>A 30-task benchmark, built with Inspect, that asks whether an AI agent can find and fix the bugs that make an ML evaluation report the wrong number. 25 tasks plant one bug each, such as train/test leakage, a wrong metric or a broken grader. The other 5 are correct pipelines that only look suspicious, to catch agents that “fix” working code.</p>
-            <!-- HALEEMA: reword (averaging now stated) -->
-            <p>On local Qwen 3.5 models, the 9B solved 75% of the bug tasks and the 4B 29%, averaged over 3 runs of each of the 25 bug tasks. Without a hint that the pipeline might be wrong, the 4B solved 3 of 25 (12%, one run each).</p>
-          </div>
-          <dl class="readouts">
-            <div><dt>120 / 120</dt><dd>no-model validation checks passed</dd></div>
-          </dl>
-        </div>
-        <p class="stack">Inspect · Docker · Python · <a href="https://github.com/haleematallat/leakbench">View on GitHub</a></p>
-      </div>
-    </article>
-  </section>
-
-  <!-- PILOTS -->
-  <section class="section" id="pilots" aria-labelledby="pilots-h">
-    <div class="row" data-mark>
-      <div class="margin"><p class="label">Pilots</p></div>
-      <div class="body">
-        <h2 id="pilots-h" class="section-title">Independent studies</h2>
-        <!-- HALEEMA: reword -->
-        <ul class="plain">
-          <li><strong>LLM Judges of Agent Behaviour Under Optimization Pressure From the Agent's Own Report</strong> · <a href="https://github.com/haleematallat/llm-judge-report-pressure/blob/llm-judge-report-pressure/docs/LLM_Judges_Under_Agent_Report_Pressure.pdf">report</a> · <a href="https://github.com/haleematallat/llm-judge-report-pressure">code</a></li>
-          <li><strong>Does Attributed Capacity for Suffering Drive AI-to-AI Help?</strong> · <a href="https://github.com/haleematallat/inter-ai-concern-vs-consequence/blob/main/docs/Attributed_Capacity_and_AI_to_AI_Help.pdf">report</a> · <a href="https://github.com/haleematallat/inter-ai-concern-vs-consequence">code</a></li>
-        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- WRITING -->
-  <section class="section" id="writing" aria-labelledby="writing-h">
-    <div class="row" data-mark>
-      <div class="margin"><p class="label">Writing</p></div>
-      <div class="body">
-        <h2 id="writing-h" class="section-title">Writing</h2>
-        <!-- HALEEMA: essay titles and links -->
-        <ul class="plain">
-          <li>Essay 1 (Apart / collusion) — coming soon</li>
-          <li>Essay 2 — coming soon</li>
-          <li>Essay 3 — coming soon</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- TALKS -->
-  <section class="section" id="talks" aria-labelledby="talks-h">
-    <div class="row section-head" data-mark>
-      <div class="margin"><p class="label">Talks</p></div>
-      <div class="body"><h2 id="talks-h" class="section-title">Talks at GDG Lahore DevFest.</h2></div>
-    </div>
-
-    <ol class="talks">
-      <li class="row" data-mark>
-        <div class="margin"><p class="date">Dec 2024</p><p class="meta">DevFest Lahore</p></div>
-        <div class="body talk">
-          <a class="thumb" href="https://www.youtube.com/watch?v=ccGgJAtZ81Y&amp;t=239s" aria-label="Watch Sleeper Agents: Deceptive LLMs and Safety Training on YouTube">
-            <span class="thumb-text">DevFest<br>2024</span>
-            <img src="https://i.ytimg.com/vi/ccGgJAtZ81Y/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
-            <span class="play">Watch</span>
-          </a>
-          <div>
-            <h3>Sleeper Agents: Deceptive LLMs &amp; Safety Training</h3>
-            <!-- HALEEMA: reword (Alhamra Hall line added) -->
-            <p>Can safety training remove deceptive behaviour that has been trained into an LLM? I went through current research on model reliability, sleeper-agent models, and how unintended behavioural patterns can emerge and survive during training. Given to a full house at Alhamra Hall, Lahore.</p>
-            <p>The talk is in a mix of Urdu and English. For English, turn on YouTube captions and choose auto-translate.</p>
-            <a class="watch" href="https://www.youtube.com/watch?v=ccGgJAtZ81Y&amp;t=239s">Watch on YouTube, from 3:59</a>
-          </div>
-        </div>
-      </li>
-      <li class="row" data-mark>
-        <div class="margin"><p class="date">Dec 2025</p><p class="meta">DevFest Lahore</p></div>
-        <div class="body talk">
-          <a class="thumb" href="https://www.youtube.com/watch?v=KZxQbs7nz_8" aria-label="Watch Imagen: Breaking LLM Intuition on YouTube">
-            <span class="thumb-text">DevFest<br>2025</span>
-            <img src="https://i.ytimg.com/vi/KZxQbs7nz_8/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
-            <span class="play">Watch</span>
-          </a>
-          <div>
-            <h3>Imagen: Breaking LLM Intuition</h3>
-            <a class="watch" href="https://www.youtube.com/watch?v=KZxQbs7nz_8">Watch on YouTube</a>
-          </div>
-        </div>
-      </li>
-      <li class="row" data-mark>
-        <div class="margin"><p class="date">Dec 2023</p><p class="meta">DevFest Lahore</p></div>
-        <div class="body talk">
-          <a class="thumb" href="https://www.youtube.com/watch?v=TmFkEk8V2S8" aria-label="Watch Unlocking Quantum Potential with Cirq and TensorFlow Quantum on YouTube">
-            <span class="thumb-text">DevFest<br>2023</span>
-            <img src="https://i.ytimg.com/vi/TmFkEk8V2S8/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
-            <span class="play">Watch</span>
-          </a>
-          <div>
-            <h3>Unlocking Quantum Potential with Cirq and TensorFlow Quantum</h3>
-            <a class="watch" href="https://www.youtube.com/watch?v=TmFkEk8V2S8">Watch on YouTube</a>
-          </div>
-        </div>
-      </li>
-    </ol>
   </section>
 
   <!-- EXPERIENCE -->
-  <section class="section" id="log" aria-labelledby="log-h">
-    <div class="row section-head" data-mark>
-      <div class="margin"><p class="label">Experience</p></div>
-      <div class="body"><h2 id="log-h" class="section-title">Where I’ve worked and studied.</h2></div>
-    </div>
-
+  <section class="panel" id="p-experience" role="tabpanel" hidden>
     <div class="jobs">
-      <div class="job">
-        <div class="row job-head" data-mark>
-          <!-- HALEEMA: end date (you have left IgniteTech, so not "Present"); also overlaps Brick & Mortar (Mar – Oct 2025), confirm both -->
-          <div class="margin"><p class="date"><span>Jul 2025 –</span> <span>2026</span></p></div>
-          <div class="body">
-            <h3>Senior AI Engineer, Agents &amp; LLM Infrastructure <span class="at">IgniteTech, via Crossover · remote</span></h3>
-            <!-- HALEEMA: reword (condensed from the old case studies) -->
-            <p>Built a distributed platform running up to 500 long-running coding agents, a self-hosted vLLM inference layer, and the first production social engine, the template for 20 more. Replacing Java monoliths with Node/TypeScript services cut memory 6–10× and startup ~20× against the monoliths.</p>
-          </div>
-        </div>
-      </div>
-      <div class="job">
-        <div class="row job-head" data-mark>
-          <div class="margin"><p class="date"><span>Mar –</span> <span>Oct 2025</span></p></div>
-          <div class="body">
-            <h3>Computer Vision Engineer <span class="at">Brick &amp; Mortar AI · Lahore</span></h3>
-            <!-- HALEEMA: reword; is the −20% identity switches relative or absolute? -->
-            <p>Found split leakage and protocol mismatches in a few-shot product classifier’s evaluation and rebuilt it (later 89.7% on an 11-way task). Segmentation-masked ReID cut identity switches by 20% against the full-bounding-box baseline, taken to production on TensorRT and Triton.</p>
-          </div>
-        </div>
-      </div>
-      <div class="job">
-        <div class="row job-head" data-mark>
-          <div class="margin"><p class="date"><span>Nov 2024 –</span> <span>Mar 2025</span></p></div>
-          <div class="body">
-            <h3>Computer Vision Engineer <span class="at">NextBridge · Lahore</span></h3>
-            <p>Built the WebRTC control stack for a smart wheelchair, with a safety watchdog that force-stops the chair on link loss.</p>
-          </div>
-        </div>
-      </div>
-      <div class="job">
-        <div class="row job-head" data-mark>
-          <div class="margin"><p class="date"><span>Nov 2023 –</span> <span>Nov 2024</span></p></div>
-          <div class="body">
-            <h3>Machine Learning Engineer <span class="at">Powersoft19 · Lahore</span></h3>
-            <p>Real-time fault detection on device telemetry, cutting turnaround from ~48 hours to ~30 minutes, and a RAG system that cut field engineers’ problem-resolution time by 90%.</p>
-          </div>
-        </div>
-      </div>
-      <div class="job">
-        <div class="row job-head" data-mark>
-          <div class="margin"><p class="date"><span>Nov 2022 –</span> <span>Nov 2023</span></p></div>
-          <div class="body">
-            <h3>Research Engineer <span class="at">KICS, Center for Language Engineering, UET Lahore</span></h3>
-            <p>A distributed OCR pipeline for historical archives, and ticker-analysis code for Tajziyakar, an OCR pipeline that flags TV news ticker content at archive scale.</p>
-          </div>
-        </div>
-      </div>
-      <div class="job">
-        <div class="row job-head" data-mark>
-          <div class="margin"><p class="date"><span>Jul –</span> <span>Sep 2022</span></p></div>
-          <div class="body">
-            <h3>AI Intern <span class="at">CureMD · Lahore</span></h3>
-            <p>A processing pipeline for cancer-treatment guidelines that cut manual processing time by 50%. CureMD Master Inventor Award, 2022.</p>
-          </div>
-        </div>
-      </div>
-      <div class="job">
-        <div class="row job-head" data-mark>
-          <div class="margin"><p class="date">2023</p></div>
-          <div class="body">
-            <h3>BSc Electrical Engineering <span class="at">University of Engineering &amp; Technology, Lahore</span></h3>
-            <p>Led the final-year project: IoT intrusion detection on traffic captured from a live testbed, deployed on a Jetson.</p>
-          </div>
-        </div>
-      </div>
+      <div class="row job-head"><div class="margin"><p class="date"><span>Jul 2025 –</span> <span>Nov 2026</span></p></div><div class="body">
+        <h3>Senior AI Engineer, Agents &amp; LLM Infrastructure <span class="at">IgniteTech, via Crossover · remote</span></h3>
+        <p>Shipped the first production social engine for IRIS, a customer-care platform, in about three months. It handles 1,000+ interactions a day across 10–15 channels and became the template for 20 more; rebuilding Java monoliths as Node.js/TypeScript services cut memory 6–10× and startup about 20×.</p>
+        <p>Architected a platform running up to 500 coding agents at once, with every model call traced in Langfuse, and designed the governed MCP layer that connects Claude Code, Cursor and in-house agents to internal systems, with scoped permissions and human approval for high-impact actions.</p>
+        <p class="stack">LangGraph · Ray · Kafka · KEDA · Kubernetes · vLLM · MCP · Langfuse · ClickHouse</p></div></div>
+      <div class="row job-head"><div class="margin"><p class="date"><span>Mar –</span> <span>Oct 2025</span></p></div><div class="body">
+        <h3>Computer Vision Engineer <span class="at">Brick &amp; Mortar AI · Lahore</span></h3>
+        <p>Built a few-shot product classifier for the ~20% of cases where barcode scanning failed. After finding train/validation leakage and protocol mismatches in its evaluation and rebuilding it, it reached 89.7% on an 11-way task under deployment conditions.</p>
+        <p>Took multi-camera tracking to edge devices with ONNX, TensorRT and a custom Triton re-identification backend: segmentation-masked ReID cut identity switches by 20%, and GPU video decoding raised throughput 10–15×. Added face recognition and zone monitoring on top.</p>
+        <p class="stack">PyTorch · YOLOv8/v11 · TensorRT · Triton</p></div></div>
+      <div class="row job-head"><div class="margin"><p class="date"><span>Nov 2024 –</span> <span>Mar 2025</span></p></div><div class="body">
+        <h3>Computer Vision Engineer <span class="at">NextBridge · Lahore</span></h3>
+        <p>Built the WebRTC control stack for a smart wheelchair, from signalling server to ROS 2 receiver, with heartbeats, automatic reconnects and a watchdog that stops the chair if the link drops. Fine-tuned Llama 3.2 Vision with 4-bit QLoRA to run object classification locally on edge hardware.</p>
+        <p class="stack">WebRTC · ROS 2 · Jetson · QLoRA</p></div></div>
+      <div class="row job-head"><div class="margin"><p class="date"><span>Nov 2023 –</span> <span>Nov 2024</span></p></div><div class="body">
+        <h3>Machine Learning Engineer <span class="at">Powersoft19 · Lahore</span></h3>
+        <p>Built a hybrid RAG system over technical documentation that cut field engineers’ resolution time by 90%. Led three engineers in replacing manual inspection with anomaly detection over 1 TB+ of telemetry, cutting fault detection from about 48 hours to 30 minutes.</p>
+        <p class="stack">PyTorch · CUDA · RAG</p></div></div>
+      <div class="row job-head"><div class="margin"><p class="date"><span>Nov 2022 –</span> <span>Nov 2023</span></p></div><div class="body">
+        <h3>Research Engineer <span class="at">KICS, Center for Language Engineering, UET Lahore</span></h3>
+        <p>Built a distributed OCR pipeline for digitising historical archives (98% accuracy, 99.9% uptime), ticker analysis for Tajziyakar, and reproductions of published RAG methods for multilingual sentiment analysis.</p></div></div>
+      <div class="row job-head"><div class="margin"><p class="date"><span>Jul –</span> <span>Sep 2022</span></p></div><div class="body">
+        <h3>AI Intern <span class="at">CureMD · Lahore</span></h3>
+        <p>A processing pipeline for cancer-treatment guidelines that halved manual processing time. CureMD Master Inventor Award, 2022.</p></div></div>
+      <div class="row job-head"><div class="margin"><p class="date">2023</p></div><div class="body">
+        <h3>BSc Electrical Engineering <span class="at">University of Engineering &amp; Technology, Lahore</span></h3>
+        <p>Led the final-year project: IoT intrusion detection on traffic from a live testbed, deployed on a Jetson. EducationUSA (USEFP) High Achiever Award.</p></div></div>
+      <div class="row job-head"><div class="margin"><p class="label">Skills</p></div><div class="body">
+        <dl class="toolkit">
+          <div><dt>Evals &amp; safety</dt><dd>Inspect, benchmark and task design, LLM-judge validation, inter-rater agreement, preregistration, bootstrap and cluster-robust inference</dd></div>
+          <div><dt>LLMs &amp; agents</dt><dd>vLLM, LangGraph, MCP, Anthropic API, OpenRouter, Modal, LoRA/QLoRA, RAG, Langfuse, Claude Code</dd></div>
+          <div><dt>ML &amp; infra</dt><dd>Python, TypeScript, PyTorch, CUDA, TensorRT, Triton, AWS, Kubernetes, Ray, Kafka, PostgreSQL, ClickHouse, Docker</dd></div>
+        </dl>
+        <p class="stack"><a href="haleema-tallat-resume.pdf">Full CV (PDF)</a></p></div></div>
     </div>
+  </section>
+
+  <!-- POSTS -->
+  <section class="panel" id="p-posts" role="tabpanel" hidden>
+    <div class="row post"><div class="margin"><p class="date">Nov 2026</p><p class="meta">EA Forum</p></div><div class="body">
+      <h3><a class="h-link" href="https://forum.effectivealtruism.org/posts/62TFvpywCqm2iw3A7/how-zooming-out-puts-ai-risk-in-perspective-for-me">How Zooming Out Puts AI Risk in Perspective for Me</a></h3>
+      <p>Deepfake harms already spread through a chain no one can stop once it starts. What does that say about our readiness for systems we understand far less?</p></div></div>
+  </section>
+
+  <!-- TALKS -->
+  <section class="panel" id="p-talks" role="tabpanel" hidden>
+    <ol class="talks">
+      <li class="row"><div class="margin"><p class="date">Dec 2024</p><p class="meta">GDG DevFest Lahore</p></div><div class="body talk">
+        <a class="thumb" href="https://youtu.be/ccGgJAtZ81Y?t=239"><span class="thumb-text">DevFest<br>2024</span><img src="https://i.ytimg.com/vi/ccGgJAtZ81Y/hqdefault.jpg" alt="" width="480" height="360"><span class="play">Watch</span></a>
+        <div><h3>Sleeper Agents: Deceptive LLMs &amp; Safety Training</h3>
+        <p>Presented Anthropic’s Sleeper Agents paper to a full house of developers at Alhamra Hall: how models trained with hidden backdoors can keep their deceptive behaviour even after standard safety training. In Urdu and English; turn on auto-translated captions.</p>
+        <a class="watch" href="https://youtu.be/ccGgJAtZ81Y?t=239">Watch from 3:59</a></div></div></li>
+      <li class="row"><div class="margin"><p class="date">Dec 2025</p><p class="meta">GDG DevFest Lahore</p></div><div class="body talk">
+        <a class="thumb" href="https://www.youtube.com/watch?v=KZxQbs7nz_8"><span class="thumb-text">DevFest<br>2025</span><img src="https://i.ytimg.com/vi/KZxQbs7nz_8/hqdefault.jpg" alt="" width="480" height="360"><span class="play">Watch</span></a>
+        <div><h3>Imagen: Breaking LLM Intuition</h3>
+        <p>Why generative image models aren’t visual LLMs: outputs are sampled, not computed, and realism can show up without any understanding behind it.</p>
+        <a class="watch" href="https://www.youtube.com/watch?v=KZxQbs7nz_8">Watch on YouTube</a></div></div></li>
+      <li class="row"><div class="margin"><p class="date">Dec 2023</p><p class="meta">GDG DevFest Lahore</p></div><div class="body talk">
+        <a class="thumb" href="https://www.youtube.com/watch?v=TmFkEk8V2S8"><span class="thumb-text">DevFest<br>2023</span><img src="https://i.ytimg.com/vi/TmFkEk8V2S8/hqdefault.jpg" alt="" width="480" height="360"><span class="play">Watch</span></a>
+        <div><h3>Unlocking Quantum Potential with Cirq and TensorFlow Quantum</h3>
+        <p>A workshop on building and training a quantum machine-learning model, and where quantum ML has beaten classical models on quantum data.</p>
+        <a class="watch" href="https://www.youtube.com/watch?v=TmFkEk8V2S8">Watch on YouTube</a></div></div></li>
+    </ol>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="panel" id="p-about" role="tabpanel" hidden>
+    <div class="row case"><div class="margin"><p class="label">Teaching</p><p class="date">2020 – 2026</p></div><div class="body">
+      <dl class="milestones">
+        <div><dt>2026</dt><dd>A week with 15 girls in Hunza, from Python basics to a trip-planning app they deployed on Streamlit. IEI Pakistan · Tech Sahelis.</dd></div>
+        <div><dt>2022</dt><dd>Programming workshop, GC College</dd></div>
+        <div><dt>2020</dt><dd>Robotics workshops and a Scratch curriculum, UET outreach</dd></div>
+      </dl>
+      <a class="gallery" href="https://lnkd.in/p/dfB5nnTq" aria-label="Photos from the Hunza workshop. Opens the LinkedIn post.">
+        <img class="g-main" src="images/community/hunza-teaching.jpg" alt="Teaching Python to a classroom of girls at laptops">
+        <img src="images/community/hunza-classroom.jpg" alt="Wooden classroom with laptops and a mountain view">
+        <img src="images/community/hunza-valley.jpg" alt="The Hunza valley">
+        <img src="images/community/hunza-banner.jpg" alt="Tech Sahelis banner at Digital Hub Hunza">
+        <span class="gallery-cta">Read the post on LinkedIn ↗</span>
+      </a></div></div>
+    <div class="row case"><div class="margin"><p class="label">MUN</p><p class="date">2021 – 2023</p></div><div class="body">
+      <dl class="milestones">
+        <div><dt>2022–23</dt><dd>President of UET MUN Society, its first female president</dd></div>
+        <div><dt>2021–22</dt><dd>Secretary General</dd></div>
+        <div><dt>Awards</dt><dd>4 Best Delegate awards</dd></div>
+      </dl>
+      <p class="chips"><a class="chip" href="https://youtu.be/sl1yOjWPb94?t=673">Watch the interview ↗</a></p></div></div>
+    <div class="row case"><div class="margin"><p class="label">Science</p><p class="date">2021 – 2023</p></div><div class="body">
+      <dl class="milestones">
+        <div><dt>2021</dt><dd>Quantum computing courses, Khwarizmi Science Society</dd></div>
+        <div><dt>2022–23</dt><dd>Volunteer, Lahore Science Mela and the Lahore Museum summer camp</dd></div>
+      </dl></div></div>
+    <div class="row case"><div class="margin"><p class="label">Recognition</p></div><div class="body">
+      <dl class="milestones">
+        <div><dt>COHACK</dt><dd>1st place, national hackathon, for an AI-driven crop sprinkler (2022) <a class="chip" href="https://www.instagram.com/p/CaSAkEMIxsE/">Instagram ↗</a></dd></div>
+        <div><dt>CureMD</dt><dd>Master Inventor Award, Young Inventors Programme (2022) <a class="chip" href="https://www.curemd.com/yip-winners-2022.asp">Winners list ↗</a></dd></div>
+        <div><dt>USEFP</dt><dd>EducationUSA High Achiever Award</dd></div>
+      </dl></div></div>
   </section>
 
   <!-- CONTACT -->
-  <section class="section contact" id="contact" aria-labelledby="contact-h">
-    <div class="row" data-mark>
-      <div class="margin"><p class="label">Contact</p></div>
-      <div class="body">
-        <h2 id="contact-h" class="claim">Get in touch</h2>
-        <p class="lede">Email and LinkedIn are the best ways to reach me.</p>
-        <div class="email-row">
-          <a class="btn btn--big" href="mailto:haleematallat019@gmail.com">haleematallat019@gmail.com</a>
-          <button class="copy" type="button" data-copy="haleematallat019@gmail.com">Copy address</button>
-          <a class="btn btn--big btn--line" href="https://www.linkedin.com/in/haleema-tallat" rel="me">LinkedIn</a>
-        </div>
-        <ul class="links links--quiet">
-          <li><a href="haleema-tallat-resume.pdf">Résumé <span class="dim">PDF</span></a></li>
-          <li><a href="https://github.com/haleematallat" rel="me">GitHub</a></li>
-        </ul>
+  <section class="panel contact" id="p-contact" role="tabpanel" hidden>
+    <div class="row case"><div class="margin"><p class="label">Contact</p></div><div class="body">
+      <h2 class="claim">Get in touch</h2>
+      <p class="lede">Email and LinkedIn are the best ways to reach me.</p>
+      <div class="email-row">
+        <a class="btn btn--big" href="mailto:haleematallat019@gmail.com">haleematallat019@gmail.com</a>
+        <button class="copy" type="button" data-copy="haleematallat019@gmail.com">Copy address</button>
+        <a class="btn btn--big btn--line" href="https://linkedin.com/in/haleema-tallat">LinkedIn</a>
       </div>
-    </div>
+      <ul class="links links--quiet">
+        <li><a href="haleema-tallat-resume.pdf">CV <span class="dim">PDF</span></a></li>
+        <li><a href="https://github.com/haleematallat">GitHub</a></li>
+        <li><a href="https://huggingface.co/powercoding1">Hugging Face</a></li>
+      </ul></div></div>
   </section>
+  </div>
 </main>
 
 <footer class="foot">
   <p>Haleema Tallat · Lahore, Pakistan</p>
-  <p class="dim">Hosted on GitHub Pages. Updated October 2026.</p>
+  <p class="dim">Updated November 2026.</p>
 </footer>
 
-<script src="main.js" defer></script>
+<script>
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  var landing = document.querySelector('.landing');
+  var nav = document.querySelector('.tabs');
+  function show(key) {
+    if (!document.getElementById('p-' + key)) key = 'research';
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('href') === '#' + key;
+      t.setAttribute('aria-selected', String(on));
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      if (on) nav.scrollLeft = t.offsetLeft - 16; // keep the active tab visible in the swipeable phone row
+    });
+    // every tab opens at the same place: just under the pinned tab bar
+    var y = landing.getBoundingClientRect().bottom + window.scrollY;
+    if (window.scrollY > y) window.scrollTo({ top: y, behavior: 'instant' });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      var key = t.getAttribute('href').slice(1);
+      history.replaceState(null, '', '#' + key);
+      show(key);
+    });
+  });
+  window.addEventListener('hashchange', function () { show(location.hash.slice(1)); });
+  show(location.hash.slice(1));
+</script>
+<script src="main.js?v=4" defer></script>
 </body>
 </html>
