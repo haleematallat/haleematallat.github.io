@@ -292,6 +292,8 @@ h1 {
 .top { position: static; justify-content: flex-end; }
 .landing { text-align: center; padding: clamp(56px, 13vh, 132px) 0 clamp(48px, 9vh, 96px); }
 .landing .claim { margin: 22px auto 0; max-width: 46ch; }
+.landing-cv { margin-top: 30px; }
+.landing-cv .dim { color: inherit; opacity: .7; }
 .tabs {
   position: sticky; top: 0; z-index: 5; background: var(--paper);
   display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 34px;
