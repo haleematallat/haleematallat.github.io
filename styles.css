@@ -279,6 +279,22 @@ h1 {
 }
 .chip:hover, .chip:focus-visible { border-color: var(--signal); color: var(--ink); }
 .milestones dd .chip { margin-left: 4px; }
+.embed { margin-top: 26px; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--panel); }
+.embed iframe { display: block; width: 100%; border: 0; }
+.embed--video { max-width: 680px; aspect-ratio: 16 / 9; }
+.embed--video iframe { height: 100%; }
+.embed--post { max-width: 420px; }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 22px; max-width: 860px; }
+.pair figure .embed { margin-top: 0; }
+.pair figcaption { margin-top: 12px; font-family: var(--sans); font-size: 15px; color: var(--graphite); }
+.pair figcaption strong { color: var(--ink); font-weight: 600; }
+.preview { display: block; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--panel); text-decoration: none; }
+.preview img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
+.preview-src { display: block; padding: 10px 12px; font-family: var(--mono); font-size: 12px; color: var(--signal-ink); }
+.pair figcaption .chip { margin-top: 10px; }
+.cert { margin-top: 26px; max-width: 420px; }
+.cert img { display: block; width: 100%; border: 1px solid var(--rule); border-radius: 6px; }
+.cert figcaption { margin-top: 10px; font-family: var(--sans); font-size: 14px; color: var(--graphite); }
 
 .gallery { position: relative; display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: repeat(3, minmax(0, 1fr)); gap: 6px;
   max-width: 680px; aspect-ratio: 16 / 10; margin-top: 26px; border-radius: 6px; overflow: hidden; text-decoration: none; }
